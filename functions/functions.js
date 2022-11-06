@@ -8,3 +8,8 @@ function retornaMeuNome() {
     //   return minhaIdade
 }
 console.log(retornaMeuNome());
+// Exemplo de função que pode não retornar nada.
+function digaOi() {
+    console.log('Oi');
+}
+digaOi();
