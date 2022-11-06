@@ -34,3 +34,13 @@ tsc nomearquivo.ts
 
 - Esse comando vai criar um arquivo javascript do arquivo typescript.
 - Isso demonstra o processo de compilação do TypeScript. Que no arquivo tsc tipa o js.
+
+# TSC com HTML
+
+- Inicialmente, criamos um arquivo html e dentro do body colocamos script e o basico.js
+- Depois, rodamos os comandos:
+
+```
+npm init -y  (para não fazer perguntas e configurar padrão)
+npm i -s live-server (-s para salvar nas dependencias, vai servir para rodar o html)
+```
