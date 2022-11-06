@@ -38,3 +38,15 @@ console.log(hobbies);
 // tuplas
 let endereco: [string, number, number] = ['Av qualquer', 99, 12501300];
 console.log(endereco);
+
+// enums
+// estrutura que definimos valores pré definidos, por exemplo dia da semana, segunda, terça, quarta... e por assim vai! Com isso, vamos enumarando, ENUM, esses valores! E depois, ainda podemos usar esse enum como uma tipagem! Segue um exemplo:
+
+enum Cor {
+  Cinza, //0
+  Preto, //1
+  Azul, // 2
+}
+
+let minhaCor: Cor = Cor.Cinza;
+console.log(minhaCor);
