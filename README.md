@@ -7,6 +7,12 @@ npm i -g typescript
 tsc -v
 ```
 
+- Instalando ts-node, serve para rodar ts com node!
+
+```
+npm i -g ts-node
+```
+
 # Iniciando 🚀
 
 - Vamos rodar o comando abaixo, que vai criar o arquivo tsconfig.json!
