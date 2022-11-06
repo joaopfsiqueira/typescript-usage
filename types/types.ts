@@ -50,7 +50,7 @@ enum Cor {
   Laranja = 100, // podemos repetir os valores, o type script não limita!
 }
 
-let minhaCor: Cor = Cor.Cinza;
+let minhaCor: Cor = Cor.Preto; // armazenando 100
 console.log(minhaCor);
 console.log(Cor.Azul);
 

@@ -42,7 +42,7 @@ var Cor;
     Cor[Cor["Rosa"] = 102] = "Rosa";
     Cor[Cor["Laranja"] = 100] = "Laranja";
 })(Cor || (Cor = {}));
-let minhaCor = Cor.Cinza;
+let minhaCor = Cor.Preto; // armazenando 100
 console.log(minhaCor);
 console.log(Cor.Azul);
 // any
