@@ -1,2 +1,3 @@
-var a = 'Teste TS!';
+"use strict";
+const a = 'Teste TS!';
 console.log(a);
