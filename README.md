@@ -71,3 +71,21 @@ npm i -s live-server (-s para salvar nas dependencias, vai servir para rodar o h
 ```
 let endereco: [string, number, number] = ['Av qualquer', 99, 12501300];
 ```
+
+# Enum
+
+- _Enum_ é uma forma de enumerar objetos ordenados e pré definidos. E ainda por cima usar como TIPAGEM. Sim! Criamos nosso próprio tipo! Por exemplo:
+
+```
+enum DiaSemana {
+    Segunda, // 0
+    Terça, // 1
+    Quarta // 2
+}
+
+
+let dia: DiaSemana = DiaSemana.Segunda
+console.log(dia)
+```
+
+- Esse código acima vai aceitar a tipagem e vai retornar no console o valor do index segunda, no caso, 0.
