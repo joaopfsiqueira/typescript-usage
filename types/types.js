@@ -21,3 +21,9 @@ console.log(typeof minhaIdade);
 // nesse exemplo ele não retorna nenhum erro, uma vez que não declaramos o tipo de nenhuma maneira.
 // seja tipando ou atribuindo um valor padrão à variável.
 // e ainda informei um "any", avisando que pode ser qualquer valor.
+// aray
+let hobbies = ['jogar', 'estudar', 'futebol']; // tipando informando que é um array
+//e dentro do array vai ter qualquer valor, number, string
+console.log(hobbies, typeof hobbies);
+hobbies = [100, 200, 300]; //inserindo o valor de um array com numbers
+console.log(hobbies);
