@@ -45,3 +45,8 @@ var Cor;
 let minhaCor = Cor.Cinza;
 console.log(minhaCor);
 console.log(Cor.Azul);
+// any
+let carro = 'BWM';
+console.log(carro);
+carro = { marca: 'BWM', ano: 2019 }; //Setando object no lugar da string!
+//Any é uma tipagem que diz que a variável em questão aceite qualquer valor. Não faz tanto sentido usar, uma vez que setando como any acaba que retornamos ao javascript. Mas é uma forma de tipar!
