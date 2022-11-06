@@ -44,9 +44,12 @@ console.log(endereco);
 
 enum Cor {
   Cinza, //0
-  Preto, //1
-  Azul, // 2
+  Preto = 100, //100
+  Azul, // 2 // passa a ser 101
+  Rosa,
+  Laranja = 100, // podemos repetir os valores, o type script não limita!
 }
 
 let minhaCor: Cor = Cor.Cinza;
 console.log(minhaCor);
+console.log(Cor.Azul);

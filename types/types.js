@@ -37,8 +37,11 @@ console.log(endereco);
 var Cor;
 (function (Cor) {
     Cor[Cor["Cinza"] = 0] = "Cinza";
-    Cor[Cor["Preto"] = 1] = "Preto";
-    Cor[Cor["Azul"] = 2] = "Azul";
+    Cor[Cor["Preto"] = 100] = "Preto";
+    Cor[Cor["Azul"] = 101] = "Azul";
+    Cor[Cor["Rosa"] = 102] = "Rosa";
+    Cor[Cor["Laranja"] = 100] = "Laranja";
 })(Cor || (Cor = {}));
 let minhaCor = Cor.Cinza;
 console.log(minhaCor);
+console.log(Cor.Azul);
