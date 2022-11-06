@@ -1,5 +1,9 @@
 # TypeSccript Usage
 
+- Repositório criado para entender desde o básico ao avançado de TypeScript.
+- Esse projeto consiste em criar arquivo ts, compilar para js com tsc -w e rodar o js no html, acessando os valores pelo f12 + console do navegador.
+- Sendo assim, em _types_, vai existir diversos exemplos de uso com tsc.
+
 # Instalação 🔧
 
 ```
