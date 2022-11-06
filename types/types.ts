@@ -32,3 +32,9 @@ let hobbies: any[] = ['jogar', 'estudar', 'futebol']; // tipando informando que 
 console.log(hobbies, typeof hobbies);
 hobbies = [100, 200, 300]; //inserindo o valor de um array com numbers
 console.log(hobbies);
+
+// o que é tupla? array de tipos com uma linguagem pré-definidas de tipos. exemplo
+// quero um array com 1 string e 2 numbers!
+// tuplas
+let endereco: [string, number, number] = ['Av qualquer', 99, 12501300];
+console.log(endereco);
