@@ -114,3 +114,36 @@ let carro: any = 'BWM'
 console.log(carro)
 carro = { marca: 'BWM', ano: 2019} //Setando object no lugar da string!
 ```
+
+# Funções
+
+- Em funções, podemos tipar tanto a própria função, o retorno dela e os parâmetros dela. Segue exemplos:
+
+- Tipando função
+
+```
+function retornaMeuNome(): string {
+  return nome;
+  //   return minhaIdade
+}
+```
+
+- Temos funções que podem não retornar nada!
+
+```
+function digaOi(): void {
+  console.log('Oi');
+  //return minhaIdade testando
+}
+```
+
+- E temos como tipar tudo junto!
+
+```
+function multiplicar(numA: number, numB: number): number {
+  return numA * numB;
+}
+
+console.log(multiplicar(2, 4));
+
+```
