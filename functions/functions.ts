@@ -12,6 +12,14 @@ console.log(retornaMeuNome());
 // Exemplo de função que pode não retornar nada.
 function digaOi(): void {
   console.log('Oi');
+  //return minhaIdade testando
 }
 
 digaOi();
+
+// tipando função e parametros
+function multiplicar(numA: number, numB: number): number {
+  return numA * numB;
+}
+
+console.log(multiplicar(2, 4));
