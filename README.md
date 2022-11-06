@@ -63,3 +63,11 @@ npm i -s live-server (-s para salvar nas dependencias, vai servir para rodar o h
 ```
 
 - Depois, configuramos um script npm start para rodar "live-server", ele vai abrir no naveghador!
+
+# Tuplas
+
+- Tuplas são arrays de tipo. A parte diferente é que esse array é pré-definido do inicio ao fim. Seja em quantidades de elementos dentro dele, até os tipos dos elementos.
+
+```
+let endereco: [string, number, number] = ['Av qualquer', 99, 12501300];
+```
