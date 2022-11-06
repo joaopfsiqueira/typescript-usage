@@ -26,3 +26,4 @@ tsc nomearquivo.ts
 ```
 
 - Esse comando vai criar um arquivo javascript do arquivo typescript.
+- Isso demonstra o processo de compilação do TypeScript. Que no arquivo tsc tipa o js.
