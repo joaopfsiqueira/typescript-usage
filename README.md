@@ -8,6 +8,7 @@ tsc -v
 ```
 
 - Instalando ts-node, serve para rodar ts com node!
+- Isso também faz funcionar a extensão code runner em tsc!
 
 ```
 npm i -g ts-node
