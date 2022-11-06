@@ -62,9 +62,11 @@ npm init -y  (para não fazer perguntas e configurar padrão)
 npm i -s live-server (-s para salvar nas dependencias, vai servir para rodar o html)
 ```
 
-- Depois, configuramos um script npm start para rodar "live-server", ele vai abrir no naveghador!
+- Depois, configuramos um script npm start para rodar "live-server", ele vai abrir no navegador!
 
-# Tuplas
+# Diferenciais
+
+### Tuplas
 
 - Tuplas são arrays de tipo. A parte diferente é que esse array é pré-definido do inicio ao fim. Seja em quantidades de elementos dentro dele, até os tipos dos elementos.
 
@@ -72,7 +74,7 @@ npm i -s live-server (-s para salvar nas dependencias, vai servir para rodar o h
 let endereco: [string, number, number] = ['Av qualquer', 99, 12501300];
 ```
 
-# Enum
+### Enum
 
 - _Enum_ é uma forma de enumerar objetos ordenados e pré definidos. E ainda por cima usar como TIPAGEM. Sim! Criamos nosso próprio tipo! Por exemplo:
 
@@ -105,7 +107,7 @@ console.log(minhaCor);
 console.log(Cor.Azul);
 ```
 
-# Any
+### Any
 
 - Any é uma tipagem que diz que a variável em questão aceite qualquer valor. Não faz tanto sentido usar, uma vez que setando como any acaba que retornamos ao javascript. Mas é uma forma de tipar!
 
@@ -115,7 +117,7 @@ console.log(carro)
 carro = { marca: 'BWM', ano: 2019} //Setando object no lugar da string!
 ```
 
-# Funções
+### Funções
 
 - Em funções, podemos tipar tanto a própria função, o retorno dela e os parâmetros dela. Segue exemplos:
 
