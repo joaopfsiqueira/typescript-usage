@@ -175,3 +175,19 @@ console.log(calculo2(5, 10));
 - O ts permite que criemos a nossa própria Tipagem! É bastante utilizada em casos de funções diferentes com alguma tipagem igual! (Alias)
 
 [Exemplo]()
+
+### union types
+
+- Permite definir vários tipos em uma mesma função, variável ou algo do tipo.
+
+```
+//union types
+let nota: number | string;
+
+nota = 10;
+console.log(`Minha nota é ${nota}`);
+
+nota = '10';
+console.log(`Minha nota é ${nota}`);
+
+```
