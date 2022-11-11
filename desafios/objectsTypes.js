@@ -3,6 +3,7 @@ let funcionario = {
     nome: 'Siqueira',
     supervisores: ['João', 'Maria', 'Gabriel'],
     baterPonto(horario) {
+        //função(parametro): tiporetorno
         if (horario < 8) {
             return 'Fora do horário';
         }
@@ -12,5 +13,5 @@ let funcionario = {
     },
 };
 console.log(funcionario.supervisores);
-console.log(funcionario.baterPonto(8));
+console.log(funcionario.baterPonto(7));
 console.log(funcionario.baterPonto(9));
