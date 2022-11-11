@@ -10,8 +10,10 @@ function baterPonto(horario) {
         return (funcionario.ponto = 'Ponto normal');
     }
 }
-baterPonto(9);
 let funcionario = {
+    nome: 'Siqueira',
     supervisores: ['João', 'Maria', 'Gabriel'],
-    ponto: 'Dentro do horário',
+    ponto: '',
 };
+baterPonto(9);
+console.log(funcionario);

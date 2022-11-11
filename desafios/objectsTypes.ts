@@ -10,9 +10,15 @@ function baterPonto(horario: number) {
   }
 }
 
-baterPonto(9);
-
-let funcionario: { supervisores: [string, string, string]; ponto: string } = {
+let funcionario: {
+  nome: string;
+  supervisores: [string, string, string];
+  ponto: string;
+} = {
+  nome: 'Siqueira',
   supervisores: ['João', 'Maria', 'Gabriel'],
-  ponto: 'Dentro do horário',
+  ponto: '',
 };
+
+baterPonto(9);
+console.log(funcionario);
