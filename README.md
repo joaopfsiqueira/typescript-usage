@@ -172,6 +172,6 @@ console.log(calculo2(5, 10));
 
 ### type
 
-- O ts permite que criemos a nossa própria Tipagem! É bastante utilizada em casos de funções diferentes com alguma tipagem igual!
+- O ts permite que criemos a nossa própria Tipagem! É bastante utilizada em casos de funções diferentes com alguma tipagem igual! (Alias)
 
 [Exemplo]()

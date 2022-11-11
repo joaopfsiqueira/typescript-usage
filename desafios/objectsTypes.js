@@ -1,4 +1,5 @@
 "use strict";
+//alias
 let funcionario = {
     nome: 'Siqueira',
     supervisores: ['João', 'Maria', 'Gabriel'],

@@ -1,3 +1,5 @@
+//alias
+
 type Funcionario = {
   nome: string;
   supervisores: string[];
