@@ -67,3 +67,11 @@ usuario = {
     nome: 'Gabriel',
     idade: 8,
 };
+// checando tipos em javascript
+let valor = 30;
+if (typeof valor === 'number') {
+    console.log('É um number');
+}
+else {
+    console.log(typeof valor);
+}
