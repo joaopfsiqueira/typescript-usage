@@ -1,7 +1,7 @@
 "use strict";
 function baterPonto(horario) {
     let mensagem = '';
-    if (horario > 8) {
+    if (horario < 8) {
         mensagem = 'Fora do horário';
         return (funcionario.ponto = 'Fora do horário');
     }
