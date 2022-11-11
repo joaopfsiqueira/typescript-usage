@@ -1,24 +1,19 @@
-function baterPonto(horario: number) {
-  let mensagem: string = '';
-
-  if (horario < 8) {
-    mensagem = 'Fora do horário';
-    return (funcionario.ponto = 'Fora do horário');
-  } else {
-    mensagem = 'Ponto normal';
-    return (funcionario.ponto = 'Ponto normal');
-  }
-}
-
 let funcionario: {
   nome: string;
-  supervisores: [string, string, string];
-  ponto: string;
+  supervisores: [string, string, string]; //poderia por tbm string[], mas do jeito que eu fiz, especifiquei não só o tipo mas a quantidade de valores dentro do array.;
+  baterPonto: (horas: number) => string; //nome do parametro não precisa ser respeitado, e sim o tipo, ordem, etc
 } = {
   nome: 'Siqueira',
   supervisores: ['João', 'Maria', 'Gabriel'],
-  ponto: '',
+  baterPonto(horario: number): string {
+    if (horario < 8) {
+      return 'Fora do horário';
+    } else {
+      return 'Ponto normal';
+    }
+  },
 };
 
-baterPonto(9);
-console.log(funcionario);
+console.log(funcionario.supervisores);
+console.log(funcionario.baterPonto(8));
+console.log(funcionario.baterPonto(9));
