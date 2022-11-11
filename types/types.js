@@ -50,3 +50,20 @@ let carro = 'BWM';
 console.log(carro);
 carro = { marca: 'BWM', ano: 2019 }; //Setando object no lugar da string!
 //Any é uma tipagem que diz que a variável em questão aceite qualquer valor. Não faz tanto sentido usar, uma vez que setando como any acaba que retornamos ao javascript. Mas é uma forma de tipar!
+//objetos de forma explicita, ou certo, no momento em que você só colocar nome e idade e atribuir valores no objeto, ele vai vai entender os tipos, porém, da forma abaixo, foi feito de forma explicita!
+let usuario = {
+    nome: 'João',
+    idade: 22,
+};
+console.log(usuario);
+//Formas de causar erro: Descomente e coloque o mouse em cima!
+// usuario = {}
+// usuario = {
+//   name: 'Maria',
+//   age: 23
+// }
+//posso atribuir valores novos, desde que esteja com o mesmo nome de chave e o mesmo tipo.
+usuario = {
+    nome: 'Gabriel',
+    idade: 8,
+};
