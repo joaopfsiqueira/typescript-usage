@@ -1,6 +1,6 @@
 type ContaBancaria = {
   saldo: number;
-  depositar: (valor: number) => void;
+  depositar: (valor: number) => void; //void pq a função n retorna nada
 };
 
 type Correntista = {
