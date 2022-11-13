@@ -16,3 +16,24 @@ console.log(canal);
 function test3(a: any, b: any) {
   return a + b;
 }
+
+// nesse exemplo abaixo, um erro está sendo gerado pq saudacao = null. Esse erro ocorre por conta da flag strictNullChecks (default true)
+// desativar seria uma péssima prática, quando for para retornar null é só colocar um any no retorno ou um null.
+// function saudar(isManha: boolean): string {
+//   let saudacao: string;
+//   if (isManha) {
+//     saudacao = 'bom dia';
+//   }
+//   return saudacao;
+// }
+
+// código ajustado
+function saudar(isManha: boolean): string {
+  let saudacao: string;
+  if (isManha) {
+    saudacao = 'bom dia';
+  } else {
+    saudacao = 'Tenha uma boa tarde / noite';
+  }
+  return saudacao;
+}

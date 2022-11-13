@@ -289,6 +289,10 @@ function teste3(x, y) {
 
 ### strictNullChecks
 
+- Serve para checar nulos, saber se o código está gerando algum nulo.
+
 ### noUnusedParameters
+
+- Parametros que não estão sendo usados.
 
 ### noUnusedLocals
