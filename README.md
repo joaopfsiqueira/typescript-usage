@@ -328,3 +328,26 @@ function saudar2(isManha: boolean, horas: number): string {
 ### noUnusedLocals
 
 - Config que valida se alguma variável com algum valor não está sendo utilizada!
+
+```
+// noUnusedLocal
+function saudar3(isManha: boolean): string {
+  let a = 1;
+  let saudacao: string;
+  if (isManha) {
+    saudacao = 'Bom dia!';
+  } else {
+    saudacao = 'Tenha uma boa noite/tarde';
+  }
+  return saudacao;
+}
+
+```
+
+- Ao ativar no noUnusedLocal, vai passar a retornar o seguinte erro no console:
+
+```
+'a' is declared but its value is never read.
+
+let a = 1;
+```
