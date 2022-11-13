@@ -231,6 +231,7 @@ console.log(`Minha nota é ${nota}`);
 # Compilador
 
 - Existem diversas possibilidades dentro do arquivo tsconfig.json! Nessa categoria, vamos estudar algumas!
+- É altamente recomendável que as config mencionadas abaixo sejam descomentadas no arquivo tsconfig.json! São úteis.
 
 ### noEmitOnError
 
