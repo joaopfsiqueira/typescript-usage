@@ -257,3 +257,12 @@ console.log(`Minha nota é ${nota}`);
 ```
     // "sourceMap": true,                                /* Create source map files for emitted JavaScript files. */
 ```
+
+### noImplicitAny
+
+- Serve para avisar quando um tipo any for declarado implicitamente! Ou certo, sempre que não tipar uma variável, ele retorna um erro abaixo dela avisando sobre!
+- Caso essa configuração fique false (default true) ela deixa de avisar o erro e passa a deixar o any implicito!
+
+```
+// "noImplicitAny": true,                            /* Enable error reporting for expressions and declarations with an implied 'any' type. */
+```
