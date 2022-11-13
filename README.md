@@ -262,7 +262,27 @@ console.log(`Minha nota é ${nota}`);
 
 - Serve para avisar quando um tipo any for declarado implicitamente! Ou certo, sempre que não tipar uma variável, ele retorna um erro abaixo dela avisando sobre!
 - Caso essa configuração fique false (default true) ela deixa de avisar o erro e passa a deixar o any implicito!
+- Porém, esse erro só é levantado em casos onde o compilador não sabe qual o tipo da variável! Isso é, caso em nenhum momento do código esteja sendo atribuindo o valor da variável, caso seja só uma parametro enviado por uma função, por exemplo, e na hora de chamar a função passamos o valor, nesse cenário vai dar erro!
 
 ```
 // "noImplicitAny": true,                            /* Enable error reporting for expressions and declarations with an implied 'any' type. */
+```
+
+```
+function test2(a, b) {
+return a + b;
+}
+
+Erro!
+
+
+
+Acerto:
+
+x = 10
+y = 5
+function teste3(x, y) {
+  return x + y
+}
+
 ```

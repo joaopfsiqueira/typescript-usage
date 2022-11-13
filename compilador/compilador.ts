@@ -8,9 +8,9 @@ let inscritos: number = 6103;
 console.log(canal);
 
 // testando noImplicitAny
-function test2(a, b) {
-  return a + b;
-}
+// function test2(a, b) {
+//   return a + b;
+// }
 
 // nesse caso, não tem erro pq explicitamos o any. Para parar de dar o erro acima, basta deixar false o noImplicitAny
 function test3(a: any, b: any) {
