@@ -61,6 +61,30 @@ carro = { marca: 'BWM', ano: 2019 }; //Setando object no lugar da string!
 
 //Any é uma tipagem que diz que a variável em questão aceite qualquer valor. Não faz tanto sentido usar, uma vez que setando como any acaba que retornamos ao javascript. Mas é uma forma de tipar!
 
+// trabalhando com valores null, ou opcionais em casos reais! Usando union types!
+let alturaOpcional: null | number = 12;
+alturaOpcional = null;
+
+type Contato = {
+  nome: string;
+  tel1: string;
+  tel2: string | null;
+};
+
+const contato1: Contato = {
+  nome: 'Fulano',
+  tel1: '1239382932',
+  tel2: null,
+};
+console.log('🚀 ~ file: types.ts ~ line 80 ~ tel2', contato1.tel2);
+console.log('🚀 ~ file: types.ts ~ line 80 ~ tel1', contato1.tel1);
+console.log('🚀 ~ file: types.ts ~ line 80 ~ nome', contato1.nome);
+
+//nesse exemplo abaixo, o exemplo any também se aplica ao nulo!
+let podeSerNulo = null;
+podeSerNulo = 12;
+podeSerNulo = 'abc';
+console.log('🚀 ~ file: types.ts ~ line 87 ~ podeSerNulo', podeSerNulo);
 //objetos de forma explicita, ou certo, no momento em que você só colocar nome e idade e atribuir valores no objeto, ele vai vai entender os tipos, porém, da forma abaixo, foi feito de forma explicita!
 let usuario: { nome: string; idade: number } = {
   nome: 'João',

@@ -170,6 +170,39 @@ calculo2 = multiplicar;
 console.log(calculo2(5, 10));
 ```
 
+### never
+
+- Tipo usado em funções que não tem um retorno atingível. Seja com laço de repetição com lançando um erro.
+
+```
+function falha(msg: string): never {
+  throw new Error(msg);
+}
+
+const produto = {
+  nome: 'Sabão', //para testar o erro, tira o nome
+  preco: -1, //coloque um valor maior que que 0 para parar o erro.
+  validarProduto() {
+    if (!this.nome || this.nome.trim().length == 0) {
+      falha('Precisa ter um nome');
+    }
+    if (this.preco <= 0) {
+      falha('Preco inválido');
+    }
+  },
+};
+
+produto.validarProduto();
+
+```
+
+### union types
+
+- Usado para declarar mais de um tipo por vez. É bom para deixar opcionais alguns campos.
+
+```
+let alturaOpcional: null | number = 12;
+alturaOpcional = null;
 ### type
 
 - O ts permite que criemos a nossa própria Tipagem! É bastante utilizada em casos de funções diferentes com alguma tipagem igual! (Alias)
@@ -181,6 +214,7 @@ console.log(calculo2(5, 10));
 - Permite definir vários tipos em uma mesma função, variável ou algo do tipo.
 
 ```
+
 //union types
 let nota: number | string;
 
@@ -189,5 +223,7 @@ console.log(`Minha nota é ${nota}`);
 
 nota = '10';
 console.log(`Minha nota é ${nota}`);
+
+```
 
 ```

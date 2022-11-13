@@ -50,3 +50,25 @@ let calculo2: (numeroA: number, numeroB: number) => number;
 calculo2 = multiplicar;
 // calculo2 = digaOi          -> demonstrando erro
 console.log(calculo2(5, 10));
+
+//never
+// funções que não tem um ponto final do método atingivel.
+// Acontece quando você lança um erro ou um laço de repetição.
+function falha(msg: string): never {
+  throw new Error(msg);
+}
+
+const produto = {
+  nome: 'Sabão', //para testar o erro, tira o nome
+  preco: -1, //coloque um valor maior que que 0 para parar o erro.
+  validarProduto() {
+    if (!this.nome || this.nome.trim().length == 0) {
+      falha('Precisa ter um nome');
+    }
+    if (this.preco <= 0) {
+      falha('Preco inválido');
+    }
+  },
+};
+
+produto.validarProduto();
