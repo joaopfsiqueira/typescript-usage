@@ -38,7 +38,7 @@ function saudar(isManha: boolean): string {
   return saudacao;
 }
 
-// noUnusedParameters
+//noUnusedParameters
 // function saudar2(isManha: boolean, horas: number): string {
 //   let saudacao: string;
 //   if (isManha) {
@@ -48,6 +48,17 @@ function saudar(isManha: boolean): string {
 //   }
 //   return saudacao;
 // }
+
+// noUnusedParameters ajustado
+function saudar2(isManha: boolean, horas: number): string {
+  let saudacao: string;
+  if (isManha && horas > 12) {
+    saudacao = 'Bom dia!';
+  } else {
+    saudacao = 'Tenha uma boa noite/tarde';
+  }
+  return saudacao;
+}
 
 // noUnusedLocal
 function saudar3(isManha: boolean): string {
