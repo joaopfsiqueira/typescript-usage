@@ -286,3 +286,9 @@ function teste3(x, y) {
 }
 
 ```
+
+### strictNullChecks
+
+### noUnusedParameters
+
+### noUnusedLocals
