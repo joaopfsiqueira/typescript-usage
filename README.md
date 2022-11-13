@@ -291,8 +291,39 @@ function teste3(x, y) {
 
 - Serve para checar nulos, saber se o código está gerando algum nulo.
 
+```
+nesse exemplo abaixo, um erro está sendo gerado pq saudacao = null. Esse erro ocorre por conta da flag strictNullChecks (default true)
+desativar seria uma péssima prática, quando for para retornar null é só colocar um any no retorno ou um null.
+
+function saudar(isManha: boolean): string {
+let saudacao: string;
+if (isManha) {
+saudacao = 'bom dia';
+}
+return saudacao;
+}
+```
+
 ### noUnusedParameters
 
-- Parametros que não estão sendo usados.
+- Parametros que não estão sendo usados. (Default true)
+
+```
+// noUnusedParameters
+function saudar2(isManha: boolean, horas: number): string {
+  let saudacao: string;
+  if (isManha) {
+    saudacao = 'Bom dia!';
+  } else {
+    saudacao = 'Tenha uma boa noite/tarde';
+  }
+  return saudacao;
+}
+
+```
+
+- Ela vai retornar um erro no console de: horas' is declared but its value is never read. Se tornar essa config no tsconfig.json como false, ela para de reclamar!
 
 ### noUnusedLocals
+
+- Config que valida se alguma variável com algum valor não está sendo utilizada!
