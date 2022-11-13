@@ -239,3 +239,12 @@ console.log(`Minha nota é ${nota}`);
 ```
 "noEmitOnError": true,
 ```
+
+### target
+
+- Informa qual a versão do JavaScript vai ser utilizado! Ou certo, se eu criar um arquivo Tsc na hora de transpilar para JS ele vai usar essa versão de target.
+- Para ler mais sobre versões. https://www.typescriptlang.org/tsconfig#target
+
+```
+"target": "es2016" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
+```
