@@ -33,7 +33,7 @@ function saudar(isManha) {
     }
     return saudacao;
 }
-// noUnusedParameters
+//noUnusedParameters
 // function saudar2(isManha: boolean, horas: number): string {
 //   let saudacao: string;
 //   if (isManha) {
@@ -43,11 +43,33 @@ function saudar(isManha) {
 //   }
 //   return saudacao;
 // }
+// noUnusedParameters ajustado
+function saudar2(isManha, horas) {
+    let saudacao;
+    if (isManha && horas > 12) {
+        saudacao = 'Bom dia!';
+    }
+    else {
+        saudacao = 'Tenha uma boa noite/tarde';
+    }
+    return saudacao;
+}
 // noUnusedLocal
+// function saudar3(isManha: boolean): string {
+//   let a = 1;
+//   let saudacao: string;
+//   if (isManha) {
+//     saudacao = 'Bom dia!';
+//   } else {
+//     saudacao = 'Tenha uma boa noite/tarde';
+//   }
+//   return saudacao;
+// }
+// noUnusedLocal ajustado
 function saudar3(isManha) {
     let a = 1;
     let saudacao;
-    if (isManha) {
+    if (isManha && a == 1) {
         saudacao = 'Bom dia!';
     }
     else {
