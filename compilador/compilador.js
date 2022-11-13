@@ -5,3 +5,4 @@ let inscritos = 6103;
 // testando "noEmitOnError": true, basta excluir o compilador.js e descomentar o erro!
 // canal = inscritos;
 console.log(canal);
+//# sourceMappingURL=compilador.js.map

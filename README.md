@@ -248,3 +248,12 @@ console.log(`Minha nota é ${nota}`);
 ```
 "target": "es2016" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
 ```
+
+### source map
+
+- Passa a gerar um arquivo .map se descomentar dentro do tsconfig.json!
+- Quando você gera esse arquivo js em produção, ele é feito para ficar o menor possível. É muito dificil olhar esse aplicativo após ir para produção, ficando dificil para interpretar qual código é aquele! O source map vem para isso, ele faz um mapeando entre as linhas executadas pelo browser e as linhas do seu código! Ficando simples a depuração no sources do navegador!
+
+```
+    // "sourceMap": true,                                /* Create source map files for emitted JavaScript files. */
+```

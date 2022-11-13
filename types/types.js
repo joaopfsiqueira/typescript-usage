@@ -91,3 +91,4 @@ if (typeof valor === 'number') {
 else {
     console.log(typeof valor);
 }
+//# sourceMappingURL=types.js.map

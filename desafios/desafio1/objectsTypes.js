@@ -62,3 +62,4 @@ nota = 10;
 console.log(`Minha nota é ${nota}`);
 nota = '10';
 console.log(`Minha nota é ${nota}`);
+//# sourceMappingURL=objectsTypes.js.map
