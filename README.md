@@ -227,3 +227,15 @@ console.log(`Minha nota é ${nota}`);
 ```
 
 ```
+
+# Compilador
+
+- Existem diversas possibilidades dentro do arquivo tsconfig.json! Nessa categoria, vamos estudar algumas!
+
+### noEmitOnError
+
+- Por padrão vem false! Se estiver true, não gera arquivo js automatico pelo tsc -w caso tenha algum erro no script!
+
+```
+"noEmitOnError": true,
+```
