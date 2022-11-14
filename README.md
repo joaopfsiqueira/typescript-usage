@@ -232,6 +232,7 @@ console.log(`Minha nota é ${nota}`);
 
 - Existem diversas possibilidades dentro do arquivo tsconfig.json! Nessa categoria, vamos estudar algumas!
 - É altamente recomendável que as config mencionadas abaixo sejam descomentadas no arquivo tsconfig.json! São úteis.
+- No arquivo **[compilador/compilador.ts]()**
 
 ### noEmitOnError
 
@@ -350,4 +351,13 @@ function saudar3(isManha: boolean): string {
 'a' is declared but its value is never read.
 
 let a = 1;
+```
+
+### outDir
+
+- Configuração que define qual a basta onde vai ser criado os arquivos .js na hora da compilação do tsc.
+- Por padrão vem: "outDir": "./", no meu caso, vou salvar dentro de build, é uma forma comum de se ver em projeto tsc!
+
+```
+    "outDir": "./build" /* Specify an output folder for all emitted files. */,
 ```
