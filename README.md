@@ -13,6 +13,7 @@
 5 - **[TSC com HTML 🌐](https://github.com/joaopfsiqueira/typescript-usage#tsc-com-html-)**<br>
 6 - **[Diferenciais do TSC🌐](https://github.com/joaopfsiqueira/typescript-usage#diferenciais-do-tsc)**<br>
 7 - **[Compilador - tsconfig.json](https://github.com/joaopfsiqueira/typescript-usage#compilador)**
+8 - **[ECMAScript (JS)]()**
 
 # O que é TypeScript? ⁉️
 
