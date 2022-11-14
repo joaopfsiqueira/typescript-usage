@@ -271,7 +271,7 @@ console.log(`Minha nota é ${nota}`);
 
 - Existem diversas possibilidades dentro do arquivo tsconfig.json! Nessa categoria, vamos estudar algumas!
 - É altamente recomendável que as config mencionadas abaixo sejam descomentadas no arquivo tsconfig.json! São úteis.
-- No arquivo **[compilador/compilador.ts]()**
+- No arquivo **[compilador/compilador.ts](https://github.com/joaopfsiqueira/typescript-usage/blob/master/compilador/compilador.ts)**
 - Eu altamente recomendo essa doc de todas as configs! **[Docs](https://www.typescriptlang.org/tsconfig)**
 
 ### noEmitOnError
