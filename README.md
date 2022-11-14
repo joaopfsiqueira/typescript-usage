@@ -4,6 +4,15 @@
 - Esse projeto consiste em criar arquivo ts, compilar para js com tsc -w e rodar o js no html, acessando os valores pelo f12 + console do navegador.
 - Sendo assim, em _types_, vai existir diversos exemplos de uso com tsc.
 
+# Sumário 📚
+
+1 - **[O que é? ⁉️]()**<br>
+2 - **[Instalação 🔧]()**<br>
+3 - **[Iniciando 🚀]()**<br>
+4 - **[Primeiros passos 👣]()**<br>
+5 - **[TSC com HTML 🌐]()**<br>
+6 - **[Diferenciais do TSC🌐]()**<br>
+
 # O que é TypeScript? ⁉️
 
 - Javascript é uma linguagem de tipos dinâmicos, ou seja, você cria uma variável e nessa variável você pode ter os tipos que quiser. A diferença é que o TypeScript serve para tipar as coisas. Os tipos são inferidos. À partir do momento em que você cria uma variável em um tsc e atribui um valor a ela, o compilador vai entender que ela só pode receber aquele tipo e tornar um aviso, tenha você declarado que aquela variável é algum tipo ou não.
@@ -31,7 +40,7 @@ npm i -g ts-node
 tsc --init
 ```
 
-# Primeiros passos
+# Primeiros passos 👣
 
 - Criamos um arquivo tsc com uma variável tipo string.
 - Depois acessamos a pasta onde esse arquivo foi criado e rodamos o comando:
@@ -52,7 +61,7 @@ tsc -w
 Vai ficar monitorando e detectando as mudanças, e vai gerar o JavaScript automaticamente.
 ```
 
-# TSC com HTML
+# TSC com HTML 🌐
 
 - Inicialmente, criamos um arquivo html e dentro do body colocamos script e o basico.js
 - Depois, rodamos os comandos:
@@ -64,7 +73,7 @@ npm i -s live-server (-s para salvar nas dependencias, vai servir para rodar o h
 
 - Depois, configuramos um script npm start para rodar "live-server", ele vai abrir no navegador!
 
-# Diferenciais
+# Diferenciais do tsc
 
 ### Tuplas
 
