@@ -126,6 +126,35 @@ console.log(carro)
 carro = { marca: 'BWM', ano: 2019} //Setando object no lugar da string!
 ```
 
+### Arrays
+
+- Os arrays em TSC exigem uma complexidade maior comparado ao js puro. Nada demais!
+- Primeiro, precisamos tipar o nosso array, ou certo, precisamos informar o que vai dentro do nosso array!
+
+```
+let array = String[]
+
+Ou então mais de uma forma mais explicita:
+
+let array = [String, number, object, date]
+
+```
+
+- Depois, precisamos inicializar ele seja lá onde formos usar!
+
+```
+Primeiro jeito:
+let array = String[] = []
+
+Ou então dentro de uma função:
+
+function qualquer () {
+  array = [],
+  array.push()
+}
+
+```
+
 ### Funções
 
 - Em funções, podemos tipar tanto a própria função, o retorno dela e os parâmetros dela. Segue exemplos:
