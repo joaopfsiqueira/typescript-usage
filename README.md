@@ -440,3 +440,18 @@ As principais diferenças são:
 - const = var ou let só que não tem seu valor alterado. Retornando um erro caso isso aconteça.
 
 ### Arrow Function
+
+- Arrow Function é uma forma de se utilizar function.
+- Ela tem duas formas de ser trabalhada, com retorno implicíto ou explicíto. O implicíto não necessita de "return" já o explicíto sim.
+
+```
+const subtrair = (n1: number, n2: number) => n1 - n2;
+console.log(subtrair(2, 3));
+```
+
+```
+const subtrair2 = (n1: number, n2: number): number => {
+  return n1 - n2;
+};
+console.log(subtrair2(2, 3));
+```
