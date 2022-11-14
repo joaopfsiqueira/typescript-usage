@@ -353,11 +353,33 @@ function saudar3(isManha: boolean): string {
 let a = 1;
 ```
 
-### outDir
+### outDir - Diretório de saída
 
 - Configuração que define qual a basta onde vai ser criado os arquivos .js na hora da compilação do tsc.
 - Por padrão vem: "outDir": "./", no meu caso, vou salvar dentro de build, é uma forma comum de se ver em projeto tsc!
 
 ```
     "outDir": "./build" /* Specify an output folder for all emitted files. */,
+```
+
+### outFile
+
+- Ao invés de gerar vários arquivos de js, um para da tsc, existe a possibilidade de centralidar tudo em um único arquivo js com outFile!
+- Essa é mais pessoal, se não gostar, recomendo deixar comentado mesmo!
+
+```
+    // "outFile": "./build/app.js",                                  /* Specify a file that bundles all outputs into one JavaScript file. If 'declaration' is true, also designates a file that bundles all .d.ts output. */
+```
+
+- Essa opção é incompatível com o sistema de módulo commonjs. "module": "commonjs" /_ Specify what module code is generated. _/,
+- Então, caso queira utilizar a opção acima, terá de mudar o módulo para uma oopção como system.
+  Mas qual é o common js? Em forma resumida! O importar é com o require e o exportar é com module.exports.
+
+```
+//commonjs
+const moduloA = require('')
+
+module.exports = {
+  moduloA
+}
 ```
