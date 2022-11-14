@@ -17,3 +17,8 @@ console.log(somar(2, 2));
 
 // a outra maneira é com arrow function =>, que é sempre anônima. Sendo o retorno dela implicito.
 const subtrair = (n1: number, n2: number) => n1 - n2;
+console.log(subtrair(2, 3));
+
+// ou então de forma explicita.
+const subtrair2 = (n1: number, n2: number): number => n1 - n2;
+console.log(subtrair2(2, 3));
