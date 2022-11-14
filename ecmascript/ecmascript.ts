@@ -21,3 +21,13 @@ if (estaFrio) {
 // constante não pode ser alterada!
 const cpf: string = '31781378231';
 // cpf = '3928932932'; para testar o erro, basta descomentar o código!
+// o const tbm tem um escopo de bloco! Então ou ele fica global, ou dentro de apenas um bloco, dentro de uma função!
+
+function revelar() {
+  const segredo = 'interno';
+  console.log(segredo);
+}
+
+revelar();
+// aqui ele retorna que não existe
+console.log(segredo);
