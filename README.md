@@ -6,12 +6,12 @@
 
 # Sumário 📚
 
-1 - **[O que é? ⁉️]()**<br>
-2 - **[Instalação 🔧]()**<br>
-3 - **[Iniciando 🚀]()**<br>
-4 - **[Primeiros passos 👣]()**<br>
-5 - **[TSC com HTML 🌐]()**<br>
-6 - **[Diferenciais do TSC🌐]()**<br>
+1 - **[O que é? ⁉️](https://github.com/joaopfsiqueira/typescript-usage#o-que-%C3%A9-typescript-%EF%B8%8F)**<br>
+2 - **[Instalação 🔧](https://github.com/joaopfsiqueira/typescript-usage#instala%C3%A7%C3%A3o-)**<br>
+3 - **[Iniciando 🚀](https://github.com/joaopfsiqueira/typescript-usage#iniciando-)**<br>
+4 - **[Primeiros passos 👣](https://github.com/joaopfsiqueira/typescript-usage#primeiros-passos-)**<br>
+5 - **[TSC com HTML 🌐](https://github.com/joaopfsiqueira/typescript-usage#tsc-com-html-)**<br>
+6 - **[Diferenciais do TSC🌐](https://github.com/joaopfsiqueira/typescript-usage#diferenciais-do-tsc)**<br>
 
 # O que é TypeScript? ⁉️
 
