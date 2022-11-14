@@ -423,3 +423,20 @@ module.exports = {
   moduloA
 }
 ```
+
+# ECMAScript (JS)
+
+- ECMAScript é basicamente uma padronização do JavaScript, padronizada pela Ecma International. Afim de que todos os navegadores ou aplicações sigam uma padronização do JavaScript.
+- Não é o foco dessa documentação o entendimento do ECMAScript, falar sobre versões e novidades, mas acho válido explicar algumas coisas de JS.
+
+### const let var
+
+Const let e var são 3 formas de se declarar uma variável.
+As principais diferenças são:
+
+- var tem escopo global e por bloco (se declarada dentro de uma função, só é acessível nela)
+- var tem efeito de hoisting. É içado ao topo do código mesmo declarado de forma global no meio do código, por exemplo.
+- let = var
+- const = var ou let só que não tem seu valor alterado. Retornando um erro caso isso aconteça.
+
+### Arrow Function
