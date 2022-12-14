@@ -46,3 +46,18 @@ const retornarArray3 = (a: number, ...nums: number[]): number[] => {
 
 const numeros3 = retornarArray3(1, 10, 11, 12);
 console.log(numeros3);
+
+// (Tupla)
+const tupla: [number, string, boolean] = [1, 'hello', false];
+
+function tuplaParam1(a: number, b: string, c: boolean): void {
+  console.log(`1) ${a} ${b} ${c}`);
+}
+
+tuplaParam1(...tupla);
+
+function tuplaParam2(...params: [number, string, boolean]): void {
+  console.log(`2) ${params}`);
+}
+
+tuplaParam2(...tupla);

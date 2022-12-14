@@ -34,4 +34,14 @@ const retornarArray3 = (a, ...nums) => {
 };
 const numeros3 = retornarArray3(1, 10, 11, 12);
 console.log(numeros3);
+// (Tupla)
+const tupla = [1, 'hello', false];
+function tuplaParam1(a, b, c) {
+    console.log(`1) ${a} ${b} ${c}`);
+}
+tuplaParam1(...tupla);
+function tuplaParam2(...params) {
+    console.log(`2) ${params}`);
+}
+tuplaParam2(...tupla);
 //# sourceMappingURL=spread&rest.js.map
