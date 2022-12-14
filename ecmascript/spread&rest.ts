@@ -1,4 +1,4 @@
-// Rest & Spread
+// Spread - espalhar
 
 const numbers = [1, 2, 3, 4];
 console.log(Math.max(...numbers));
@@ -13,7 +13,7 @@ const turmaB: string[] = ['Fernando', 'Miguel', 'Lorena', ...turmaA]; //pegando 
 
 console.log(turmaB);
 
-// Rest
+// Rest - agrupar
 
 // Nesse caso abaixo, temos uma limitação, estamos recebendo apenas 2 parâmetros, se passarmos mais que isso o ts avisa o erro.
 function retornarArray(arg1: number, arg2: number): number[] {
@@ -32,3 +32,7 @@ function retornarArray2(...args: number[]): number[] {
 //nesse caso, posso passar quantos eu quiser que não vai dar erro algum.
 const numeros2 = retornarArray2(1, 2, 3, 4);
 console.log(numeros2);
+
+// juntando spread com rest.
+// o retornar array tem um rest que vai agrupar tudo o que receber o spread é passado como parametro.
+console.log(retornarArray2(...numbers));

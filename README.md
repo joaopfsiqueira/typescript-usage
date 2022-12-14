@@ -544,3 +544,11 @@ const numeros2 = retornarArray2(1, 2, 3, 4);
 console.log(numeros2);
 
 ```
+
+- Podemos usar spread com rest:
+
+```
+// juntando spread com rest.
+// o retornar array tem um rest que vai agrupar tudo o que receber o spread é passado como parametro.
+console.log(retornarArray2(...numbers));
+```

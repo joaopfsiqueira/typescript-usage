@@ -1,5 +1,5 @@
 "use strict";
-// Rest & Spread
+// Spread - espalhar
 const numbers = [1, 2, 3, 4];
 console.log(Math.max(...numbers));
 // mas o que o spread operator agrega? Bom, sem ele ficaria dessa forma:
@@ -8,7 +8,7 @@ console.log(Math.max(numbers[0], numbers[1], numbers[2], numbers[3]));
 const turmaA = ['João', 'Maria', 'Fernanda'];
 const turmaB = ['Fernando', 'Miguel', 'Lorena', ...turmaA]; //pegando todos os elementos da turma A e jogando na turma B com spread.
 console.log(turmaB);
-// Rest
+// Rest - agrupar
 // Nesse caso abaixo, temos uma limitação, estamos recebendo apenas 2 parâmetros, se passarmos mais que isso o ts avisa o erro.
 function retornarArray(arg1, arg2) {
     return [arg1, arg2];
@@ -23,4 +23,7 @@ function retornarArray2(...args) {
 //nesse caso, posso passar quantos eu quiser que não vai dar erro algum.
 const numeros2 = retornarArray2(1, 2, 3, 4);
 console.log(numeros2);
+// juntando spread com rest.
+// o retornar array tem um rest que vai agrupar tudo o que receber o spread é passado como parametro.
+console.log(retornarArray2(...numbers));
 //# sourceMappingURL=spread&rest.js.map
