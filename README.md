@@ -592,3 +592,66 @@ console.log(motor1, ano1);
 ```
 
 - No exemplo, ele pegou o primeiro parametro e atribuiu ao motor1 e pegou o segundo parametro e atribuiu ao ano1. Se tivessemos invertido o nome das variáveis, o valor manteria. ano1 ficaria com Motor _Zetec_ e motor1 ficaria com _2021_. Então é extremamente importante que esteja na ordem correta.
+
+- Podemos fazer destructuring com objetos também:
+
+```
+// Objetos
+const item = {
+  name: 'ssd',
+  storageSpace: '240 gb',
+  price: '2.00',
+};
+
+// sem destructuring
+const nomeItem = item.name;
+const storageSpace = item.storageSpace;
+const price = item.price;
+
+console.log(nomeItem, storageSpace, price);
+
+// com destructuring
+
+const item2 = {
+  name2: 'ssd nvme',
+  storageSpace2: '500 gb',
+  price2: '500.00',
+};
+
+const { name2, storageSpace2, price2 } = item2;
+console.log(name2, storageSpace2, price2);
+```
+
+- E ainda utilizar o alias para renomear as chaves:
+
+```
+const item3 = {
+  name3: 'placa mae',
+  storageSpace3: '0',
+  price3: '1000.00',
+};
+
+const { name3: n, storageSpace3: sp, price3: p } = item3;
+console.log(n, sp, p);
+```
+
+### Template string
+
+- Template string é um outro recurso do ECMAScript, consiste basicamente em uma forma extremamente fácil em concatenar string com variável. É criada por 2 acentos agudos. ``
+
+```
+const idade5: number = 22;
+const nome5: string = 'João';
+
+console.log(`Olá! Meu nome é ${nome}, tenho ${idade} anos.`)
+
+
+//com objetos
+const informacoesPessoais = {
+  nome: 'Joao',
+  idade: 22
+}
+
+console.log(`Olá! Meu nome é ${informacoesPessoais.nome}, tenho ${informacoesPessoais.idade} anos.`);
+
+```
