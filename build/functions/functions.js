@@ -1,3 +1,4 @@
+"use strict";
 //funções
 // Sim!! Ele está pegando a variável "nome", setada no arquivo /types/type.ts! É uma das maravilhas do tsc -w
 // tipando variável, ou certo, tipando como deve ser o retorno dela!

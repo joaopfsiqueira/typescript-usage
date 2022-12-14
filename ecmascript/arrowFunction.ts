@@ -32,18 +32,18 @@ const falarCom = (pessoa: string) => console.log('Olá ' + pessoa);
 falarCom('João');
 
 // this
-function normalComThis() {
-  console.log(this);
-}
+// function normalComThis() {
+//   console.log(this);
+// }
 
-const normalComThisEspecial = normalComThis.bind('sdsds');
-normalComThisEspecial();
+// const normalComThisEspecial = normalComThis.bind('sdsds');
+// normalComThisEspecial();
 
-//nesse caso, com arrow, ele naturalmente retorna o this da seguinte forma:
+// //nesse caso, com arrow, ele naturalmente retorna o this da seguinte forma:
 
-/**
- *
- * Window {window: Window, self: Window, document: document, name:
- */
-const arrowComThis = () => console.log(this);
-arrowComThis();
+// /**
+//  *
+//  * Window {window: Window, self: Window, document: document, name:
+//  */
+// const arrowComThis = () => console.log(this);
+// arrowComThis();

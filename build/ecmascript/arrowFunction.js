@@ -1,3 +1,4 @@
+"use strict";
 // Arrow Function
 // duas maneiras de se declarar function de forma padrão, anonimamente ou não.
 // Esse jeito abaixo define uma função anonima e salva ela dentro de uma variável.
@@ -23,16 +24,16 @@ saudacao();
 const falarCom = (pessoa) => console.log('Olá ' + pessoa);
 falarCom('João');
 // this
-function normalComThis() {
-    console.log(this);
-}
-const normalComThisEspecial = normalComThis.bind('sdsds');
-normalComThisEspecial();
-//nesse caso, com arrow, ele naturalmente retorna o this da seguinte forma:
-/**
- *
- * Window {window: Window, self: Window, document: document, name:
- */
-const arrowComThis = () => console.log(this);
-arrowComThis();
+// function normalComThis() {
+//   console.log(this);
+// }
+// const normalComThisEspecial = normalComThis.bind('sdsds');
+// normalComThisEspecial();
+// //nesse caso, com arrow, ele naturalmente retorna o this da seguinte forma:
+// /**
+//  *
+//  * Window {window: Window, self: Window, document: document, name:
+//  */
+// const arrowComThis = () => console.log(this);
+// arrowComThis();
 //# sourceMappingURL=arrowFunction.js.map

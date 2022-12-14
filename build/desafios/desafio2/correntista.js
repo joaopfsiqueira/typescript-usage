@@ -1,3 +1,4 @@
+"use strict";
 let contaBancaria = {
     saldo: 3456,
     depositar(valor) {
