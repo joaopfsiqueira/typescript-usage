@@ -552,3 +552,43 @@ console.log(numeros2);
 // o retornar array tem um rest que vai agrupar tudo o que receber o spread é passado como parametro.
 console.log(retornarArray2(...numbers));
 ```
+
+- Podemos usar com Tuplas!
+
+```
+// (Tupla)
+const tupla: [number, string, boolean] = [1, 'hello', false];
+
+function tuplaParam1(a: number, b: string, c: boolean): void {
+  console.log(`1) ${a} ${b} ${c}`);
+}
+
+tuplaParam1(...tupla);
+
+function tuplaParam2(...params: [number, string, boolean]): void {
+  console.log(`2) ${params}`);
+}
+
+tuplaParam2(...tupla);
+```
+
+### Destructuring
+
+- É uma forma de desestruturar algo.
+
+```
+const caracteristicas = ['Motor Zetec 1.8', 2020];
+
+// sem destructuring
+const motor = caracteristicas[0];
+const ano = caracteristicas[1];
+console.log(motor, ano);
+
+//com destructuring
+const caracteristicas1 = ['Motor Zetec 2.0', 2021];
+const [motor1, ano1] = caracteristicas1;
+console.log(motor1, ano1);
+
+```
+
+- No exemplo, ele pegou o primeiro parametro e atribuiu ao motor1 e pegou o segundo parametro e atribuiu ao ano1. Se tivessemos invertido o nome das variáveis, o valor manteria. ano1 ficaria com Motor _Zetec_ e motor1 ficaria com _2021_. Então é extremamente importante que esteja na ordem correta.
