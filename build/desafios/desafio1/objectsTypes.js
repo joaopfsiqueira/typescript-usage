@@ -1,4 +1,3 @@
-"use strict";
 //alias
 let funcionario = {
     nome: 'Siqueira',

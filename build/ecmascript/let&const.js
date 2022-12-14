@@ -1,4 +1,3 @@
-"use strict";
 //let & const
 let seraQuePode = '?'; // hoisting
 console.log(seraQuePode);

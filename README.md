@@ -456,3 +456,17 @@ const subtrair2 = (n1: number, n2: number): number => {
 };
 console.log(subtrair2(2, 3));
 ```
+
+### this
+
+- This é uma forma de retornar o próprio valor ou alguma coisa do tipo sem ter que utilizar o nome da variável onde está atribuindo o valor. Podendo ser qualquer coisa.
+
+```
+function normalComThis() {
+  console.log(this);
+}
+
+const normalComThisEspecial = normalComThis.bind({nome: 'Ana'});
+normalComThisEspecial();
+
+```

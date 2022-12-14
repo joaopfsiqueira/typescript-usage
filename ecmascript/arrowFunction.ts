@@ -24,3 +24,17 @@ const subtrair2 = (n1: number, n2: number): number => {
   return n1 - n2;
 };
 console.log(subtrair2(2, 3));
+
+const saudacao = () => console.log('Olá!');
+saudacao();
+
+const falarCom = (pessoa: string) => console.log('Olá ' + pessoa);
+falarCom('João');
+
+// this
+function normalComThis() {
+  console.log(this);
+}
+
+const normalComThisEspecial = normalComThis.bind('sdsds');
+normalComThisEspecial();

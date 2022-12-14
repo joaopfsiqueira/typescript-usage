@@ -1,4 +1,3 @@
-"use strict";
 //inicializando array
 let arrayPessoa = [];
 function criaPessoa(pessoa) {
