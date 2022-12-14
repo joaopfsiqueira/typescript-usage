@@ -22,3 +22,22 @@ console.log(aniversario);
 const casamento = new Data();
 casamento.ano = 2017;
 console.log(casamento);
+
+//melhor forma de fazer.
+class DataEsperta {
+  constructor(
+    public dia: number = 1,
+    public mes: number = 1,
+    public ano: number = 2000
+  ) {}
+}
+
+// depois de criar um constructor podemos criar um objeto com a instância criada com new
+const aniversarioEsperto = new DataEsperta(4, 5, 2000);
+console.log(aniversarioEsperto.dia);
+console.log(aniversarioEsperto);
+
+// como usamos parametro padrão no constructor, podemos omitir o () no new date
+const casamentoEsperto = new DataEsperta();
+casamentoEsperto.ano = 2017;
+console.log(casamentoEsperto);
