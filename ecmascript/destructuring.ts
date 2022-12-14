@@ -9,3 +9,5 @@ console.log(motor, ano);
 const caracteristicas1 = ['Motor Zetec 2.0', 2021];
 const [motor1, ano1] = caracteristicas1;
 console.log(motor1, ano1);
+
+// Objetos

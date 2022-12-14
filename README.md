@@ -574,7 +574,7 @@ tuplaParam2(...tupla);
 
 ### Destructuring
 
-- É uma forma de desestruturar algo.
+- É uma forma de desestruturar algo. Array ou Objeto
 
 ```
 const caracteristicas = ['Motor Zetec 1.8', 2020];
