@@ -36,4 +36,16 @@ falarCom('João');
 //  */
 // const arrowComThis = () => console.log(this);
 // arrowComThis();
+// Parâmetros padrão
+function contagemRegressiva(inicio = 5, fim = inicio - 5 //nesse caso, posso atribuir um valor padrão que seja igual a outra propriedade menos algo
+) {
+    console.log(inicio);
+    while (inicio >= fim) {
+        inicio--;
+        console.log(inicio);
+    }
+    console.log('Fim!');
+}
+contagemRegressiva(); //nesse caso, ele vai assumir o valor padrão 5 que eu atribui lá em cima.
+contagemRegressiva(7); //nesse caso vai assumir o novo valor que eu to passando.
 //# sourceMappingURL=arrowFunction.js.map

@@ -470,3 +470,28 @@ const normalComThisEspecial = normalComThis.bind({nome: 'Ana'});
 normalComThisEspecial();
 
 ```
+
+### Parâmetro padrão
+
+- Existe uma forma de dizermos ao código o valor padrão de uma propriedade para caso ela não receba nada.
+
+```
+// Parâmetros padrão
+function contagemRegressiva(
+  inicio: number = 5,
+  fim: number = inicio - 5 //nesse caso, posso atribuir um valor padrão que seja igual a outra propriedade menos algo
+): void {
+  console.log(inicio);
+  while (inicio >= fim) {
+    inicio--;
+    console.log(inicio);
+  }
+
+  console.log('Fim!');
+}
+
+contagemRegressiva(); //nesse caso, ele vai assumir o valor padrão 5 que eu atribui lá em cima.
+contagemRegressiva(7); //nesse caso vai assumir o novo valor que eu to passando.
+```
+
+- Inclusive, esse valor padrão pode ser um outro parâmetro!
