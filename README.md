@@ -495,3 +495,5 @@ contagemRegressiva(7); //nesse caso vai assumir o novo valor que eu to passando.
 ```
 
 - Inclusive, esse valor padrão pode ser um outro parâmetro!
+
+### Spread e Rest
