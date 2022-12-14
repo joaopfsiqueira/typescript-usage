@@ -26,4 +26,12 @@ console.log(numeros2);
 // juntando spread com rest.
 // o retornar array tem um rest que vai agrupar tudo o que receber o spread é passado como parametro.
 console.log(retornarArray2(...numbers));
+//nesse outro caso, podemos fazer um "rest" junto de outro parâmetro, basta passar o rest no fim.
+const retornarArray3 = (a, ...nums) => {
+    console.log(a); //primeiro pamametro
+    console.log(nums); // resto
+    return [a, ...nums];
+};
+const numeros3 = retornarArray3(1, 10, 11, 12);
+console.log(numeros3);
 //# sourceMappingURL=spread&rest.js.map
