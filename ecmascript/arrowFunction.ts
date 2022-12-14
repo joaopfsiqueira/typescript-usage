@@ -38,3 +38,12 @@ function normalComThis() {
 
 const normalComThisEspecial = normalComThis.bind('sdsds');
 normalComThisEspecial();
+
+//nesse caso, com arrow, ele naturalmente retorna o this da seguinte forma:
+
+/**
+ *
+ * Window {window: Window, self: Window, document: document, name:
+ */
+const arrowComThis = () => console.log(this);
+arrowComThis();
