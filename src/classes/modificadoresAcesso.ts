@@ -46,3 +46,7 @@ Array(20)
   .fill(0)
   .forEach(() => carro1.frear());
 console.log('Velocidade Atual após frear: ' + carro1.frear());
+
+// simulando erros, basta descomentar e colocar o mouse em cima do erro.
+// carro1.velocidadeAtual = 300;
+// console.log(carro1.velocidadeAtual);
