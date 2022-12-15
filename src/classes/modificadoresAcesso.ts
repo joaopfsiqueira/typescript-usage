@@ -40,4 +40,9 @@ const carro1 = new Carro('ford', 'ka', 180);
 Array(30)
   .fill(0)
   .forEach(() => carro1.acelerar());
-console.log(carro1.acelerar());
+console.log('Velocidade atual: ' + carro1.acelerar());
+
+Array(20)
+  .fill(0)
+  .forEach(() => carro1.frear());
+console.log('Velocidade Atual após frear: ' + carro1.frear());
