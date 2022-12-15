@@ -77,6 +77,48 @@ npm i -s live-server (-s para salvar nas dependencias, vai servir para rodar o h
 
 # Diferenciais do tsc
 
+## Modificadores de Acesso
+
+- Modificadores de acesso definem se determinado atributo ou método de uma classe é visível para fora ou não. Essa definição é realizada através do Private e do Public (default).
+
+## Constructor
+
+- O construtor é um método especial para criar e inicializar um objeto criado a partir de uma classe. Ele pode ser declarado de várias maneiras, mas sempre dentro de uma classe. Alguns jeitos:
+
+1. Assumindo valor padrão. Usando this para referenciar o atributo declarado anteriormente dentro da classe.
+
+```
+class Data{
+  dia: number;
+  mes: number;
+  ano: number;
+
+constructor(dia: number = 1, mes: number = 1, ano: number = 1970) {
+    this.dia = dia;
+    this.mes = mes;
+    this.ano = ano;
+  }
+}
+```
+
+2. Valor padrão e sem precisar do this visto que declaramos os atributos dentro do próprio constructor. (Melhor maneira, menos código e com um valor padrão)
+
+```
+classe Data {
+  constructor(
+    public dia: number = 1,
+    public mes: number = 1,
+    public ano: number = 1970
+  ) {}`
+}
+```
+
+- Depois, para inicializar o objeto, basta usarmos o `new nomeClasse`
+
+```
+const aniversario = new Data(4, 5, 2000);
+```
+
 ## Classes
 
 - Classes em typescript (ou em qualquer outra linguagem) são formas de informar o que determinada propriedade espera receber, mapeando suas propriedades e instânciando-as.
