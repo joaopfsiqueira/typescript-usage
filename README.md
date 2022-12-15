@@ -79,7 +79,9 @@ npm i -s live-server (-s para salvar nas dependencias, vai servir para rodar o h
 
 ## Modificadores de Acesso
 
-- Modificadores de acesso definem se determinado atributo ou método de uma classe é visível para fora ou não. Essa definição é realizada através do Private e do Public (default).
+- Modificadores de acesso definem se determinado atributo ou método de uma classe é visível para fora ou não. Essa definição é realizada através do Private e do Public (default). Se for private, apenas a classe onde tem declarado o atributo poderá mexer no atributo.
+
+- Dito isso, e se quisermos acessar ou alterar um atributo private? Deve-se criar um método PUBLICO dentro da classe onde se encontra o atributo private. Serve igualmente para um método private, caso seja necessário utilizar um método private basta criar um método public para acessar.
 
 ## Constructor
 
