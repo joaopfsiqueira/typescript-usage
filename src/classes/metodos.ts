@@ -1,4 +1,4 @@
-class Produto {
+class Product {
   //como eu estou criando constructor já com o public, não preciso criar os atributos separados:
 
   /**
@@ -13,10 +13,17 @@ class Produto {
     public preco: number,
     public desconto: number = 0
   ) {}
+
+  public resumo(): string {
+    return `${this.nome} - ${this.preco} - ${this.desconto} Valor total: ${
+      this.preco - this.desconto
+    }`;
+  }
 }
 
-const novoProduto = new Produto('Celular', 1000);
-novoProduto.desconto = 100;
-console.log(novoProduto);
-const novoProduto2 = new Produto('Celular', 1000, 3000);
-console.log(novoProduto2);
+const newProduct = new Product('Celular', 1000);
+newProduct.desconto = 100;
+console.log(newProduct.resumo());
+
+const newProduct2 = new Product('Celular', 1000, 500);
+console.log(newProduct2.resumo());
