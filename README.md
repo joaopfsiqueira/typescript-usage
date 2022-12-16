@@ -275,6 +275,35 @@ class Ferrari extends Carro {
 
 - Nesse caso, estamos tornando fixo o primeiro parâmetro de "Carro", que no caso é a _marca_, uma vez que já sabemos que a marca é ferrari, e esperamos receber apenas o _modelo_ e a _velocidadeMaxima_. (é necessário).
 
+## Getters e Setters
+
+- São funções de get (pegar) e set(setar), originalmente criado em _POO_
+
+- Embora sejam declaros parecidos com métodos, nós acessamos como atributos:
+
+```
+class Person {
+  // precisa do underline _ antes do idade para não dar conflito no get e no set pelo nome. É muito usado em privates
+  private _idade: number = 0;
+
+  get idade(): number {
+    return this._idade;
+  }
+
+  set idade(value: number) {
+    if (value >= 0 && value < 120) {
+      this._idade = value;
+    }
+  }
+}
+
+const person1 = new Person();
+person1.idade = 22; //como atributo
+
+console.log(person1); // 22
+
+```
+
 ### Tuplas
 
 - Tuplas são arrays de tipo. A parte diferente é que esse array é pré-definido do inicio ao fim. Seja em quantidades de elementos dentro dele, até os tipos dos elementos.
