@@ -1,6 +1,6 @@
 //entendendo a diferença entre os modificadores de acesso private ou public.
 // private só permite o acesso ao atributo de dentro da classe, publico permite em todo o ecossistema.
-class Carro {
+export default class Carro {
   private velocidadeAtual: number = 0;
 
   constructor(

@@ -77,11 +77,21 @@ npm i -s live-server (-s para salvar nas dependencias, vai servir para rodar o h
 
 # Diferenciais do tsc
 
+- TypeScript é uma linguagem de programação de código aberto desenvolvida pela Microsoft. É um superconjunto sintático estrito de JavaScript e adiciona tipagem estática opcional à linguagem.
+
+- Dito isso, nesse tópico vamos ver um pouco sobre novidades que o TypeScript fornece mas também vamos ver um pouco sobre alguns pontos já vistos em POO(programação orientada a objeto). Como por exemplo Modificadores de acesso, classes, constructor, herança...
+
 ## Modificadores de Acesso
 
-- Modificadores de acesso definem se determinado atributo ou método de uma classe é visível para fora ou não. Essa definição é realizada através do Private e do Public (default). Se for private, apenas a classe onde tem declarado o atributo poderá mexer no atributo.
+- Modificadores de acesso definem se determinado atributo ou método de uma classe é visível para fora ou não. Essa definição é realizada através do _Private_ e do _Public_ (default). Se for private, apenas a classe onde tem declarado o atributo poderá mexer no atributo.
 
-- Dito isso, e se quisermos acessar ou alterar um atributo private? Deve-se criar um método PUBLICO dentro da classe onde se encontra o atributo private. Serve igualmente para um método private, caso seja necessário utilizar um método private basta criar um método public para acessar.
+- Dito isso, e se quisermos acessar ou alterar um atributo private? Deve-se criar um método PUBLICO dentro da classe onde se encontra o atributo private. Serve igualmente para um método _private_, caso seja necessário utilizar um método private basta criar um método public para acessar.
+
+- Não podemos esquecer do _protected_, ele é utilizado quando há necessidade de herença privada. Na herança, vamos poder acessar os métodos e atributos de uma classe e reutilizar, mas não podemos alterar a não ser que esses métodos e atributos estejam como protected. Esse protected protege os métodos e atributos da classe que está sendo herdada para que não seja alterado em outros códigos ou até mesmo nela mesma e deixa classe que está herdando (extendendo) fazer do seu jeito sem que afete outros cantos do código.
+
+- _Public_ é transmito por herança e é aberto no código todo.
+- _Private_ não é aberto ao código todo nem transmitido para a herança.
+- _Protected_ não é aberto ao código todo e é transmitido para a herança.
 
 ## Constructor
 
@@ -189,6 +199,60 @@ const newProduct2 = new Product('Celular', 1000, 500);
 console.log(newProduct2.resumo());
 
 ```
+
+## Extends (herança)
+
+- Herança é um dos pilares da POO, junto de abstração, encapsulamento e polimorfismo. _Herança_ é o que é. Uma classe herda da outra literalmente tudo, métodos, atributos... Para realizarmos essa herança, precisamos usar o `extends`.
+
+- No código abaixo eu tenho uma classe Carro com alguns métodos e atributos.
+
+```
+class Carro {
+  private velocidadeAtual: number = 0;
+
+  constructor(
+    public marca: string,
+    public modelo: string,
+    private velocidadeMaxima: number = 200
+  ) {}
+
+  private alterarVelocidade(delta: number): number {
+    const novaVelocidade = this.velocidadeAtual + delta;
+    const velocidadeValida =
+      novaVelocidade >= 0 && novaVelocidade <= this.velocidadeMaxima;
+
+    if (velocidadeValida) {
+      this.velocidadeAtual = novaVelocidade;
+    } else {
+      this.velocidadeAtual = delta > 0 ? this.velocidadeMaxima : 0;
+    }
+
+    return this.velocidadeAtual;
+  }
+
+  //acelera de 5 em 5, gradativamente
+  public acelerar(): number {
+    return this.alterarVelocidade(5);
+  }
+
+  // freia de 5 em 5, gradativamente
+  public frear(): number {
+    return this.alterarVelocidade(-5);
+  }
+}
+```
+
+- E abaixo eu tenho uma classe Ferrari, que extende a Carro, tendo a disposição tudo o que contém no carro para uso.
+
+```
+class Ferrari extends Carro {
+
+}
+```
+
+- Nesse exemplo acima, precisa estar no mesmo arquivo. Mas, se exportarmos a class com export default e importamos em outro arquivos, podemos usar à vontade!
+
+- Um outro ponto, no exemplo acima ele só consegue herdar e reutilizar, não conseguindo ALTERAR um método ou propriedade, visto que não estão com o modificador de acesso _protected_. (explicado na seção de modificadores de acesso)
 
 ### Tuplas
 
