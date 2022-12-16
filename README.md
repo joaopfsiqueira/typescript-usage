@@ -277,7 +277,7 @@ class Ferrari extends Carro {
 
 ## Getters e Setters
 
-- São funções de get (pegar) e set(setar), originalmente criado em _POO_
+- São funções de get (pegar) e set(setar) algum atributo, originalmente criado em _POO_. Ok, mas para que serve esse get e set se podemos fazer ambas as ações sem necessariamente explicitamente usar as funções get e set? Os benefícios que o get e set nos trazem é uma validação de valor do atributo. Podemos deixar nossos atributos private e setar os valores apenas se algo for verdadeiro, como no exemplo abaixo.
 
 - Embora sejam declaros parecidos com métodos, nós acessamos como atributos:
 
@@ -298,9 +298,9 @@ class Person {
 }
 
 const person1 = new Person();
-person1.idade = 22; //como atributo
+person1.idade = 22; //usando o set
 
-console.log(person1); // 22
+console.log(person1.idade); // usando o get.
 
 ```
 
