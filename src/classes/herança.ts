@@ -33,6 +33,10 @@ class Carro {
 }
 
 class Ferrari extends Carro {
+  constructor(modelo: string, velocidadeMaxima: number) {
+    super('Ferrari', modelo, velocidadeMaxima);
+  }
+
   public acelerar(): number {
     return this.alterarVelocidade(20);
   }
@@ -43,7 +47,7 @@ class Ferrari extends Carro {
   }
 }
 
-const f40 = new Ferrari('Ferrari', 'F40', 324);
+const f40 = new Ferrari('F40', 324);
 
 Array(30)
   .fill(0)

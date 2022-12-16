@@ -254,6 +254,27 @@ class Ferrari extends Carro {
 
 - Um outro ponto, no exemplo acima ele só consegue herdar e reutilizar, não conseguindo ALTERAR um método ou propriedade, visto que não estão com o modificador de acesso _protected_. (explicado na seção de modificadores de acesso)
 
+- Outro ponto importante é, e se quisermos alterar a inicialização de algum atributo dentro de um objeto? No caso, alterar algo de dentro de um constructor? Fazemos da seguinte maneira utilizando `Super`
+
+```
+class Ferrari extends Carro {
+  constructor(modelo: string, velocidadeMaxima: number) {
+    super('Ferrari', modelo, velocidadeMaxima);
+  }
+
+  public acelerar(): number {
+    return this.alterarVelocidade(20);
+  }
+
+  // freia de 5 em 5, gradativamente
+  public frear(): number {
+    return this.alterarVelocidade(-15);
+  }
+}
+```
+
+- Nesse caso, estamos tornando fixo o primeiro parâmetro de "Carro", que no caso é a _marca_, uma vez que já sabemos que a marca é ferrari, e esperamos receber apenas o _modelo_ e a _velocidadeMaxima_. (é necessário).
+
 ### Tuplas
 
 - Tuplas são arrays de tipo. A parte diferente é que esse array é pré-definido do inicio ao fim. Seja em quantidades de elementos dentro dele, até os tipos dos elementos.
