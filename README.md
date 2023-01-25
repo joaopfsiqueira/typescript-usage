@@ -404,6 +404,31 @@ class Unico {
 console.log(Unico.getInstance().agora());
 ```
 
+### readonly
+
+- `readonly` é usado como modificador de atributos, quando queremos que determinado atributo tenha apenas um valor desde o ínicio, sem deixar modificar o seu valor.
+
+```
+// É possível criar atributos que só ficam para leitura. Para isso, basta usar o modificador readonly.
+
+class Aviao {
+  public readonly modelo: string; // propriedade
+
+  constructor(modelo: string, public readonly prefixo: string) {
+    // é possível usar readonly em uma sintaxe com menos código, colocando as propriedades direto no constructor como "prefixo".
+    this.modelo = modelo;
+  }
+}
+
+const turboHelice = new Aviao('TU-114', 'PT-ABC');
+turboHelice.modelo = 'PT-115';
+turboHelice.prefixo = 'PT-116';
+console.log(turboHelice);
+
+// Nesse exemplo é possível entender o readonly. Instanciamos avião e atribuimos nas propriedades modelo e prefixo os valores e depois tentamos alterar e não foi possível!
+
+```
+
 ### Tuplas
 
 - Tuplas são arrays de tipo. A parte diferente é que esse array é pré-definido do inicio ao fim. Seja em quantidades de elementos dentro dele, até os tipos dos elementos.
