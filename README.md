@@ -340,6 +340,16 @@ class MatematicaEstatica {
 console.log(MatematicaEstatica.areaCirc(4));
 ```
 
+### Classe Abstrata
+
+- Classes abstrata é uma forma de remeter à algo no mundo real. Por exemplo, um celular é um conceito abstrato. Dentro desse conceito existe diversos modelos, propriedades, etc. Como exemplo, um iphone x, ele é um tipo de celular. Esse conceito vem da programação orientada à objetos.
+
+Usamos o prefixo `abstract` para criar uma classe abstrata. _Não é possível instanciar classes abstratas._ Dito isso, a única função é reaproveitamento de código, vai servir para herdar para outras classes. Você não quer instanciar classes abstratas, e sim seus "filhos" (classes abaixo)
+
+```
+
+```
+
 ### Tuplas
 
 - Tuplas são arrays de tipo. A parte diferente é que esse array é pré-definido do inicio ao fim. Seja em quantidades de elementos dentro dele, até os tipos dos elementos.
