@@ -10,8 +10,8 @@ class Aviao {
 }
 
 const turboHelice = new Aviao('TU-114', 'PT-ABC');
-turboHelice.modelo = 'PT-115';
-turboHelice.prefixo = 'PT-116';
+// turboHelice.modelo = 'PT-115';
+// turboHelice.prefixo = 'PT-116';
 console.log(turboHelice);
 
 // Nesse exemplo é possível entender o readonly. Instanciamos avião e atribuimos nas propriedades modelo e prefixo os valores e depois tentamos alterar e não foi possível!
