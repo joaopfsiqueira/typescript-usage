@@ -28,5 +28,4 @@ class Retangulo extends Objeto2D {
 }
 
 const medida = new Retangulo(20, 10);
-medida.area();
-console.log(medida.area);
+console.log(medida.area());
