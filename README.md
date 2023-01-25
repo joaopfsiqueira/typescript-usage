@@ -304,6 +304,42 @@ console.log(person1.idade); // usando o get.
 
 ```
 
+### Classes Estáticas
+
+- Métodos estáticos são uma forma de utilizar classes e métodos sem precisar instanciar.
+
+O melhor jeito de entender é ver o jeito sem o prefixo `static` e com o prefixo.
+
+-Basicamente, do jeito abaixo, utilizei o método normal, sem ser estático. Onde precisamos INSTANCIAR uma classe (Matematica) para poder acessar suas propriedades e métodos.
+
+```
+class Matematica {
+  PI: number = 3.1416;
+
+  areaCirc(raio: number): number {
+    return this.PI * raio * raio;
+  }
+}
+
+const m1 = new Matematica();
+m1.PI = 4.2;
+console.log(m1.areaCirc(3));
+```
+
+- Da forma _estática_:
+
+```
+class MatematicaEstatica {
+  static PI: number = 3.1416;
+
+  static areaCirc(raio: number): number {
+    return this.PI * raio * raio;
+  }
+}
+
+console.log(MatematicaEstatica.areaCirc(4));
+```
+
 ### Tuplas
 
 - Tuplas são arrays de tipo. A parte diferente é que esse array é pré-definido do inicio ao fim. Seja em quantidades de elementos dentro dele, até os tipos dos elementos.
