@@ -23,7 +23,7 @@ abstract class Calculo {
 // nesse caso, estamos criando uma classe Soma que vai herdar os métodos e atributos da classe abstrata Calculo. Ao fazer isso, precisamos implementar os métodos abstratos da classe pai, no caso, executar.
 class Soma extends Calculo {
   executar(...numeros: number[]): void {
-    this.resultado = numeros.reduce((a, b) => a + b);
+    this.resultado = numeros.reduce((a, b) => a + b); // usamos o reduce para pegar todos os valores de dentro do array de números.
   }
 }
 

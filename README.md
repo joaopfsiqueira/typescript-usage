@@ -346,8 +346,39 @@ console.log(MatematicaEstatica.areaCirc(4));
 
 Usamos o prefixo `abstract` para criar uma classe abstrata. _Não é possível instanciar classes abstratas._ Dito isso, a única função é reaproveitamento de código, vai servir para herdar para outras classes. Você não quer instanciar classes abstratas, e sim seus "filhos" (classes abaixo)
 
-```
+Dentro de uma classe abstratas pode ter tanto métodos abstratos quanto métodos concretos.
 
+```
+abstract class Calculo {
+  protected resultado: number = 0;
+
+  abstract executar(...numeros: number[]): void;
+
+  getResultado(): number {
+    return this.resultado;
+  }
+}
+
+// nesse caso, estamos criando uma classe Soma que vai herdar os métodos e atributos da classe abstrata Calculo. Ao fazer isso, precisamos implementar os métodos abstratos da classe pai, no caso, executar.
+class Soma extends Calculo {
+  executar(...numeros: number[]): void {
+    this.resultado = numeros.reduce((a, b) => a + b); // usamos o reduce para pegar todos os valores de dentro do array de números.
+  }
+}
+
+class Multiplicacao extends Calculo {
+  executar(...numeros: number[]): void {
+    this.resultado = numeros.reduce((a, b) => a * b);
+  }
+}
+
+let c1 = new Soma();
+c1.executar(2, 3, 4, 5);
+console.log(c1.getResultado());
+
+let c2 = new Multiplicacao();
+c2.executar(2, 3, 4, 5);
+console.log(c2.getResultado());
 ```
 
 ### Tuplas
