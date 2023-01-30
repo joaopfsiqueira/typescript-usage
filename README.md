@@ -618,7 +618,14 @@ console.log(`Minha nota é ${nota}`);
 
 ```
 
+## Namespaces
+
+- Os namespaces servem para criar um ambiente para que os nomes das suas funções ou variáveis não entrem em conflito, uma vez que costumam ficar em escopo global. Ou certo, em typescript não podemos criar funções ou variáveis com nomes iguais mesmo em arquivos distintos. Namespace resolve esse problema.
+
 ```
+
+```
+
 
 # Compilador
 
@@ -632,7 +639,9 @@ console.log(`Minha nota é ${nota}`);
 - Por padrão vem false! Se estiver true, não gera arquivo js automatico pelo tsc -w caso tenha algum erro no script!
 
 ```
+
 "noEmitOnError": true,
+
 ```
 
 ### target
@@ -641,7 +650,9 @@ console.log(`Minha nota é ${nota}`);
 - Para ler mais sobre versões. https://www.typescriptlang.org/tsconfig#target
 
 ```
-"target": "es2016" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
+
+"target": "es2016" /_ Set the JavaScript language version for emitted JavaScript and include compatible library declarations. _/,
+
 ```
 
 ### source map
@@ -650,7 +661,9 @@ console.log(`Minha nota é ${nota}`);
 - Quando você gera esse arquivo js em produção, ele é feito para ficar o menor possível. É muito dificil olhar esse aplicativo após ir para produção, ficando dificil para interpretar qual código é aquele! O source map vem para isso, ele faz um mapeando entre as linhas executadas pelo browser e as linhas do seu código! Ficando simples a depuração no sources do navegador!
 
 ```
+
     // "sourceMap": true,                                /* Create source map files for emitted JavaScript files. */
+
 ```
 
 ### noImplicitAny
@@ -660,24 +673,25 @@ console.log(`Minha nota é ${nota}`);
 - Porém, esse erro só é levantado em casos onde o compilador não sabe qual o tipo da variável! Isso é, caso em nenhum momento do código esteja sendo atribuindo o valor da variável, caso seja só uma parametro enviado por uma função, por exemplo, e na hora de chamar a função passamos o valor, nesse cenário vai dar erro!
 
 ```
-// "noImplicitAny": true,                            /* Enable error reporting for expressions and declarations with an implied 'any' type. */
+
+// "noImplicitAny": true, /_ Enable error reporting for expressions and declarations with an implied 'any' type. _/
+
 ```
 
 ```
+
 function test2(a, b) {
 return a + b;
 }
 
 Erro!
 
-
-
 Acerto:
 
 x = 10
 y = 5
 function teste3(x, y) {
-  return x + y
+return x + y
 }
 
 ```
@@ -687,6 +701,7 @@ function teste3(x, y) {
 - Serve para checar nulos, saber se o código está gerando algum nulo.
 
 ```
+
 nesse exemplo abaixo, um erro está sendo gerado pq saudacao = null. Esse erro ocorre por conta da flag strictNullChecks (default true)
 desativar seria uma péssima prática, quando for para retornar null é só colocar um any no retorno ou um null.
 
@@ -697,6 +712,7 @@ saudacao = 'bom dia';
 }
 return saudacao;
 }
+
 ```
 
 ### noUnusedParameters
@@ -704,15 +720,16 @@ return saudacao;
 - Parametros que não estão sendo usados. (Default true)
 
 ```
+
 // noUnusedParameters
 function saudar2(isManha: boolean, horas: number): string {
-  let saudacao: string;
-  if (isManha) {
-    saudacao = 'Bom dia!';
-  } else {
-    saudacao = 'Tenha uma boa noite/tarde';
-  }
-  return saudacao;
+let saudacao: string;
+if (isManha) {
+saudacao = 'Bom dia!';
+} else {
+saudacao = 'Tenha uma boa noite/tarde';
+}
+return saudacao;
 }
 
 ```
@@ -724,16 +741,17 @@ function saudar2(isManha: boolean, horas: number): string {
 - Config que valida se alguma variável com algum valor não está sendo utilizada!
 
 ```
+
 // noUnusedLocal
 function saudar3(isManha: boolean): string {
-  let a = 1;
-  let saudacao: string;
-  if (isManha) {
-    saudacao = 'Bom dia!';
-  } else {
-    saudacao = 'Tenha uma boa noite/tarde';
-  }
-  return saudacao;
+let a = 1;
+let saudacao: string;
+if (isManha) {
+saudacao = 'Bom dia!';
+} else {
+saudacao = 'Tenha uma boa noite/tarde';
+}
+return saudacao;
 }
 
 ```
@@ -741,9 +759,11 @@ function saudar3(isManha: boolean): string {
 - Ao ativar no noUnusedLocal, vai passar a retornar o seguinte erro no console:
 
 ```
+
 'a' is declared but its value is never read.
 
 let a = 1;
+
 ```
 
 ### outDir - Diretório de saída
@@ -752,7 +772,9 @@ let a = 1;
 - Por padrão vem: "outDir": "./", no meu caso, vou salvar dentro de build, é uma forma comum de se ver em projeto tsc!
 
 ```
+
     "outDir": "./build" /* Specify an output folder for all emitted files. */,
+
 ```
 
 ### outFile
@@ -761,7 +783,9 @@ let a = 1;
 - Essa é mais pessoal, se não gostar, recomendo deixar comentado mesmo!
 
 ```
+
     // "outFile": "./build/app.js",                                  /* Specify a file that bundles all outputs into one JavaScript file. If 'declaration' is true, also designates a file that bundles all .d.ts output. */
+
 ```
 
 - Essa opção é incompatível com o sistema de módulo commonjs. "module": "commonjs" /_ Specify what module code is generated. _/,
@@ -769,12 +793,14 @@ let a = 1;
   Mas qual é o common js? Em forma resumida! O importar é com o require e o exportar é com module.exports.
 
 ```
+
 //commonjs
 const moduloA = require('')
 
 module.exports = {
-  moduloA
+moduloA
 }
+
 ```
 
 # ECMAScript (JS)
@@ -798,15 +824,19 @@ As principais diferenças são:
 - Ela tem duas formas de ser trabalhada, com retorno implicíto ou explicíto. O implicíto não necessita de "return" já o explicíto sim.
 
 ```
+
 const subtrair = (n1: number, n2: number) => n1 - n2;
 console.log(subtrair(2, 3));
+
 ```
 
 ```
+
 const subtrair2 = (n1: number, n2: number): number => {
-  return n1 - n2;
+return n1 - n2;
 };
 console.log(subtrair2(2, 3));
+
 ```
 
 ### this
@@ -814,8 +844,9 @@ console.log(subtrair2(2, 3));
 - This é uma forma de retornar o próprio valor ou alguma coisa do tipo sem ter que utilizar o nome da variável onde está atribuindo o valor. Podendo ser qualquer coisa.
 
 ```
+
 function normalComThis() {
-  console.log(this);
+console.log(this);
 }
 
 const normalComThisEspecial = normalComThis.bind({nome: 'Ana'});
@@ -828,22 +859,24 @@ normalComThisEspecial();
 - Existe uma forma de dizermos ao código o valor padrão de uma propriedade para caso ela não receba nada.
 
 ```
+
 // Parâmetros padrão
 function contagemRegressiva(
-  inicio: number = 5,
-  fim: number = inicio - 5 //nesse caso, posso atribuir um valor padrão que seja igual a outra propriedade menos algo
+inicio: number = 5,
+fim: number = inicio - 5 //nesse caso, posso atribuir um valor padrão que seja igual a outra propriedade menos algo
 ): void {
-  console.log(inicio);
-  while (inicio >= fim) {
-    inicio--;
-    console.log(inicio);
-  }
+console.log(inicio);
+while (inicio >= fim) {
+inicio--;
+console.log(inicio);
+}
 
-  console.log('Fim!');
+console.log('Fim!');
 }
 
 contagemRegressiva(); //nesse caso, ele vai assumir o valor padrão 5 que eu atribui lá em cima.
 contagemRegressiva(7); //nesse caso vai assumir o novo valor que eu to passando.
+
 ```
 
 - Inclusive, esse valor padrão pode ser um outro parâmetro!
@@ -853,6 +886,7 @@ contagemRegressiva(7); //nesse caso vai assumir o novo valor que eu to passando.
 - Spread Operator é um operador utilizado em arrays para instânciar e passar como parâmetro.
 
 ```
+
 // Rest & Spread
 
 const numbers = [1, 2, 3, 4];
@@ -875,11 +909,12 @@ console.log(turmaB);
 - Rest operator é extremamente similar ao spread, quase a mesma coisa. Mas é utilizado em conceitos de recebimento de parâmetros, enquanto o spread é utilizado para passar. Veja como o Rest pode ser utilizado:
 
 ```
+
 // Rest
 
 // Nesse caso abaixo, temos uma limitação, estamos recebendo apenas 2 parâmetros, se passarmos mais que isso o ts avisa o erro.
 function retornarArray(arg1: number, arg2: number): number[] {
-  return [arg1, arg2];
+return [arg1, arg2];
 }
 
 const numeros = retornarArray(1, 2);
@@ -888,7 +923,7 @@ console.log(numeros);
 
 // nesse caso, podemos fazer um "Rest", que basicamente vai pegar todos os parâmetros recebidos e armazenar em um único lugar.
 function retornarArray2(...args: number[]): number[] {
-  return args;
+return args;
 }
 
 //nesse caso, posso passar quantos eu quiser que não vai dar erro algum.
@@ -900,28 +935,32 @@ console.log(numeros2);
 - Podemos usar spread com rest:
 
 ```
+
 // juntando spread com rest.
 // o retornar array tem um rest que vai agrupar tudo o que receber o spread é passado como parametro.
 console.log(retornarArray2(...numbers));
+
 ```
 
 - Podemos usar com Tuplas!
 
 ```
+
 // (Tupla)
 const tupla: [number, string, boolean] = [1, 'hello', false];
 
 function tuplaParam1(a: number, b: string, c: boolean): void {
-  console.log(`1) ${a} ${b} ${c}`);
+console.log(`1) ${a} ${b} ${c}`);
 }
 
 tuplaParam1(...tupla);
 
 function tuplaParam2(...params: [number, string, boolean]): void {
-  console.log(`2) ${params}`);
+console.log(`2) ${params}`);
 }
 
 tuplaParam2(...tupla);
+
 ```
 
 ### Destructuring
@@ -929,6 +968,7 @@ tuplaParam2(...tupla);
 - É uma forma de desestruturar algo. Array ou Objeto
 
 ```
+
 const caracteristicas = ['Motor Zetec 1.8', 2020];
 
 // sem destructuring
@@ -948,11 +988,12 @@ console.log(motor1, ano1);
 - Podemos fazer destructuring com objetos também:
 
 ```
+
 // Objetos
 const item = {
-  name: 'ssd',
-  storageSpace: '240 gb',
-  price: '2.00',
+name: 'ssd',
+storageSpace: '240 gb',
+price: '2.00',
 };
 
 // sem destructuring
@@ -965,32 +1006,36 @@ console.log(nomeItem, storageSpace, price);
 // com destructuring
 
 const item2 = {
-  name2: 'ssd nvme',
-  storageSpace2: '500 gb',
-  price2: '500.00',
+name2: 'ssd nvme',
+storageSpace2: '500 gb',
+price2: '500.00',
 };
 
 const { name2, storageSpace2, price2 } = item2;
 console.log(name2, storageSpace2, price2);
+
 ```
 
 - E ainda utilizar o alias para renomear as chaves:
 
 ```
+
 const item3 = {
-  name3: 'placa mae',
-  storageSpace3: '0',
-  price3: '1000.00',
+name3: 'placa mae',
+storageSpace3: '0',
+price3: '1000.00',
 };
 
 const { name3: n, storageSpace3: sp, price3: p } = item3;
 console.log(n, sp, p);
+
 ```
 
 #### Outros exemplos de rest e spread:
 
 ```
-// 5 -  Simplifique os trechos de código abaixo utilizando o operador Destructuring
+
+// 5 - Simplifique os trechos de código abaixo utilizando o operador Destructuring
 
 // var notas = [8.5, 6.3, 9.4]
 // var notas1 = notas[0]
@@ -1020,6 +1065,7 @@ console.log(primeiroNome, experiencia);
 //ou então usando rest e spread
 const { ...informacoes } = cientista;
 console.log(informacoes);
+
 ```
 
 ### Template string
@@ -1027,16 +1073,16 @@ console.log(informacoes);
 - Template string é um outro recurso do ECMAScript, consiste basicamente em uma forma extremamente fácil em concatenar string com variável. É criada por 2 acentos agudos. ``
 
 ```
+
 const idade5: number = 22;
 const nome5: string = 'João';
 
 console.log(`Olá! Meu nome é ${nome}, tenho ${idade} anos.`)
 
-
 //com objetos
 const informacoesPessoais = {
-  nome: 'Joao',
-  idade: 22
+nome: 'Joao',
+idade: 22
 }
 
 console.log(`Olá! Meu nome é ${informacoesPessoais.nome}, tenho ${informacoesPessoais.idade} anos.`);
@@ -1048,12 +1094,13 @@ console.log(`Olá! Meu nome é ${informacoesPessoais.nome}, tenho ${informacoesP
 - Promise é uma forma de esperar um valor que ainda não existe. Basicamente dizemos ao código para esperar determinado valor, já que inicialmente o valor é undefined.
 
 ```
+
 // callback
 
 function esperar3s() {
-  setTimeout(() => {
-    console.log('Tempo passou!');
-  }, 3000);
+setTimeout(() => {
+console.log('Tempo passou!');
+}, 3000);
 }
 
 esperar3s();
@@ -1061,9 +1108,9 @@ esperar3s();
 // mostrando qual o problema que enfrentamos sem promises ou async. Ele vai retornar undefined.
 // se usassemos promises ou async, informariamos à aplicação para esperar o retorno da função para ai sim consolar o resultado.
 function esperar4s() {
-  setTimeout(() => {
-    return '4s depois...';
-  }, 4000);
+setTimeout(() => {
+return '4s depois...';
+}, 4000);
 }
 const resultado = esperar3s();
 console.log(resultado);
@@ -1071,34 +1118,36 @@ console.log(resultado);
 //uma forma de contornar esse problema não é nem com promises ou async, mas naturalmente com callback functions.
 
 function esperar2s(callback: (dado: string) => void) {
-  setTimeout(() => {
-    callback('4s depois...');
-  }, 4000);
+setTimeout(() => {
+callback('4s depois...');
+}, 4000);
 }
 esperar2s(function (resultado: string) {
-  console.log(resultado);
+console.log(resultado);
 });
 
 // Agora com promises:
 // Essa promise usa callback.
 function esperar2sPromise() {
-  return new Promise((resolve: any) => {
-    setTimeout(() => {
-      resolve('2s depois com promise ...');
-    }, 2000);
-  });
+return new Promise((resolve: any) => {
+setTimeout(() => {
+resolve('2s depois com promise ...');
+}, 2000);
+});
 }
 
 esperar2sPromise().then((dado) => console.log(dado));
 
 // usando com fetch para consumir uma api(pode ser usado com axios, mas para não instalar nenhuma dependências vamos usar o fetch que é nativo do node.)
 fetch('https://swapi.dev/api/people/1')
-  .then((res) => res.json()) //pegando o json que foi retornado e ai (then) atribuimos dentor de personagem.
-  .then((personagem) => personagem.films) //depois, dentro de personagem, eu quero retornar os films
-  .then((films) => fetch(films[0])) // dentro de films, quero pegar o primeiro index
-  .then((resFilm) => resFilm.json()) //salvo o json retornado do fetch anterior dentro de resFilm
-  .then((filme) => console.log(filme.title)); //acesso o valor retornado anteriormente como filme e consolo.
+.then((res) => res.json()) //pegando o json que foi retornado e ai (then) atribuimos dentor de personagem.
+.then((personagem) => personagem.films) //depois, dentro de personagem, eu quero retornar os films
+.then((films) => fetch(films[0])) // dentro de films, quero pegar o primeiro index
+.then((resFilm) => resFilm.json()) //salvo o json retornado do fetch anterior dentro de resFilm
+.then((filme) => console.log(filme.title)); //acesso o valor retornado anteriormente como filme e consolo.
 
 // ao rodar o código, percebam que existe um delay minimo para retornar os dados da requisição, isso porque é uma api externa, mesmo que seja milissegundos ainda leva um tempo para conectar à api com http e retornar os dados da requisição, e esse tempo minimo é o suficiente para quebrar a nossa aplicação.
+
+```
 
 ```
