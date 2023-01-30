@@ -670,6 +670,54 @@ console.log(Geometria.Area.retangulo(10, 20));
 ```
 
 ## Namespaces em múltiplos arquivos.
+- Podemos separar um namespace por vários arquivos a titulo de organização.
+
+Veja o exemplo:
+
+- Arquivo 1
+
+```
+
+namespace McDonalds {
+export namespace Loja {
+const valor = 1900000;
+
+    export function adquirir(quantidade: number) {
+      return valor * Math.pow(quantidade, 2);
+    }
+
+}
+}
+
+```
+
+- Arquivo 2
+```
+
+namespace McDonalds {
+export namespace Loja {
+const valor = 20000;
+
+    export function vender(): string {
+      return `compre a loja por ${valor}`;
+    }
+
+}
+}
+
+```
+
+- Arquivo Principal
+```
+
+const quantidade = 2;
+
+console.log(McDonalds.Loja.adquirir(quantidade));
+console.log(McDonalds.Loja.vender());
+
+```
+
+
 
 # Compilador
 
