@@ -669,6 +669,8 @@ console.log(Geometria.Area.retangulo(10, 20));
 
 ```
 
+## Namespaces em múltiplos arquivos.
+
 # Compilador
 
 - Existem diversas possibilidades dentro do arquivo tsconfig.json! Nessa categoria, vamos estudar algumas!
