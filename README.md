@@ -973,6 +973,8 @@ cli.log();
 
 ```
 
+# Generics
+
 # Compilador
 
 - Existem diversas possibilidades dentro do arquivo tsconfig.json! Nessa categoria, vamos estudar algumas!
