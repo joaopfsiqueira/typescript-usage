@@ -940,6 +940,18 @@ class RealABC implements ABC {
 }
 ```
 
+- Classes abstratas com interface.
+
+```
+// em classes abstratas, devemos criar os metodos da a e b.
+abstract class AbstractABD implements A, B {
+  a(): void {}
+  b(): void {}
+  abstract d(): void;
+}
+
+```
+
 # Compilador
 
 - Existem diversas possibilidades dentro do arquivo tsconfig.json! Nessa categoria, vamos estudar algumas!

@@ -103,3 +103,10 @@ class RealABC implements ABC {
   b(): void {}
   c(): void {}
 }
+
+// em classes abstratas, devemos criar os metodos da a e b.
+abstract class AbstractABD implements A, B {
+  a(): void {}
+  b(): void {}
+  abstract d(): void;
+}
