@@ -903,7 +903,42 @@ console.log(potencia(3, 10));
 
 ## Herança com interfaces.
 
-- É possível utilizar herança nas interfaces
+- É possível utilizar herança nas interfaces. Da mesma forma que classe com clase usa o prefixo `extends`, interface para interface é a mesma coisa. Em caso de classe para interface, é utilizado o `implements`.
+
+```
+interface A {
+  a(): void;
+}
+
+interface B {
+  b(): void;
+}
+
+// essa interface ABC  tem os metodos da A e da B e ainda acrescentou um método novo.
+interface ABC extends A, B {
+  c(): void;
+}
+```
+
+- Class para interface:
+
+```
+// a principal diferença do implements é a necessidade de criar um corpo para o método. {}
+class RealA implements A {
+  a(): void {}
+}
+
+class RealAB implements A, B {
+  a(): void {}
+  b(): void {}
+}
+
+class RealABC implements ABC {
+  a(): void {}
+  b(): void {}
+  c(): void {}
+}
+```
 
 # Compilador
 

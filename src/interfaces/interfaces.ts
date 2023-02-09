@@ -87,3 +87,19 @@ interface B {
 interface ABC extends A, B {
   c(): void;
 }
+
+// a principal diferença do implements é a necessidade de criar um corpo para o método. {}
+class RealA implements A {
+  a(): void {}
+}
+
+class RealAB implements A, B {
+  a(): void {}
+  b(): void {}
+}
+
+class RealABC implements ABC {
+  a(): void {}
+  b(): void {}
+  c(): void {}
+}
