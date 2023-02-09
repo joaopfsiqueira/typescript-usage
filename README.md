@@ -975,6 +975,20 @@ cli.log();
 
 # Generics
 
+- Generics se refere à tipagem genérica (any), algo que espera algo genérico, qualquer coisa, algo não específicado, pode receber qualquer tipo de valor. É usada em casos onde não importa o tipo da variável, mesmo no banco de dados.
+
+```
+function echo(objeto: any) {
+  return objeto;
+}
+
+console.log(echo('João'));
+console.log(echo(1));
+console.log(echo({ nome: 'João' }));
+console.log(echo('João').length);
+
+```
+
 # Compilador
 
 - Existem diversas possibilidades dentro do arquivo tsconfig.json! Nessa categoria, vamos estudar algumas!
