@@ -833,6 +833,29 @@ mudarNome2({ nome: 'Gabriel' });
 
 Basicamente, criamos uma interface humano, que vai vai explicitar e forçar o recebimento de nome e idade nas duas funções dentro de um objeto. Caso contrário, vai apontar um erro e quebrar o código (dependendo da configuração no tsconfig.)
 
+## interfaces e métodos
+
+- podemos definir um método dentro de uma propriedade! Deixando a interface assim:
+
+```
+interface Humano {
+  nome: string;
+  idade?: number; //o "?" diz que ele pode ou não receber esse atributo, tornando opicional.
+  [prop: string]: any; //colocar entre colchetes []:any diz que vai receber um terceiro atributo, só não sabemos o nome desse atributo!
+  saudar(sobrenome: string): void
+}
+
+const pessoa: Humano = {
+  nome: 'João',
+  idade: 22,
+  saudar(sobrenome: string) {
+    console.log(`Olá ${this.nome} ${sobrenome}`);
+  },
+};
+
+pessoa.saudar('Siqueira');
+```
+
 # Compilador
 
 - Existem diversas possibilidades dentro do arquivo tsconfig.json! Nessa categoria, vamos estudar algumas!
