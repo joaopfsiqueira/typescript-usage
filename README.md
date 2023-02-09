@@ -952,6 +952,27 @@ abstract class AbstractABD implements A, B {
 
 ```
 
+## Interface com objetos.
+
+- Podemos criar interfaces de objetos com o `prototype`.
+
+```
+// interfaces com objetos
+const x = 2;
+const y = 3;
+const z = 4;
+
+Object.prototype.log = function () {
+  console.log(this.toString());
+};
+
+x.log();
+
+const cli = { nome: 'Pedro' };
+cli.log();
+
+```
+
 # Compilador
 
 - Existem diversas possibilidades dentro do arquivo tsconfig.json! Nessa categoria, vamos estudar algumas!
