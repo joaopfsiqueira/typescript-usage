@@ -763,6 +763,9 @@ import areaCircunferencial as circ from './circunferencia';
 
 ```
 
+## module
+- Dentro do arquivo tsconfig.json, existe uma propriedade `module` que por padrão recebe `commonjs`, essa propriedade define como o ts vai interpretar os modulos, sendo o es2021, es6, entre outros, algumas das opções utilizadas.
+
 # Compilador
 
 - Existem diversas possibilidades dentro do arquivo tsconfig.json! Nessa categoria, vamos estudar algumas!
