@@ -72,3 +72,18 @@ potencia = function (base: number, exp: number): number {
 };
 
 console.log(potencia(3, 10));
+
+// interface e herança
+
+interface A {
+  a(): void;
+}
+
+interface B {
+  b(): void;
+}
+
+// essa interface ABC  tem os metodos da A e da B e ainda acrescentou um método novo.
+interface ABC extends A, B {
+  c(): void;
+}
