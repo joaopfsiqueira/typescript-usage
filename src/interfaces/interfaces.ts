@@ -56,3 +56,19 @@ meuCliente.nome = 'Gabriel';
 saudarComOla(meuCliente);
 meuCliente.saudar('Siqueira');
 console.log(meuCliente.ultimaCompra);
+
+// Interface função
+// essa interface representa uma FUNÇÃO. recebe dois parametros do tipo number e um retorno do tipo number.
+interface FuncaoCalculo {
+  (a: number, b: number): number;
+}
+
+let potencia: FuncaoCalculo;
+
+potencia = function (base: number, exp: number): number {
+  return Array(exp)
+    .fill(base)
+    .reduce((t, a) => t * a);
+};
+
+console.log(potencia(3, 10));

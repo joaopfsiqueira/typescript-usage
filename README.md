@@ -883,8 +883,27 @@ console.log(meuCliente.ultimaCompra);
 - Podemos utilizar interfaces dentro de uma função!
 
 ```
+// Interface função
+// essa interface representa uma FUNÇÃO. recebe dois parametros do tipo number e um retorno do tipo number.
+interface FuncaoCalculo {
+  (a: number, b: number): number;
+}
+
+let potencia: FuncaoCalculo;
+
+potencia = function (base: number, exp: number): number {
+  return Array(exp)
+    .fill(base)
+    .reduce((t, a) => t * a);
+};
+
+console.log(potencia(3, 10));
 
 ```
+
+## Herança com interfaces.
+
+- É possível utilizar herança nas interfaces
 
 # Compilador
 
