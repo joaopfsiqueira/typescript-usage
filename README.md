@@ -766,6 +766,23 @@ import areaCircunferencial as circ from './circunferencia';
 ## module
 - Dentro do arquivo tsconfig.json, existe uma propriedade `module` que por padrão recebe `commonjs`, essa propriedade define como o ts vai interpretar os modulos, sendo o es2021, es6, entre outros, algumas das opções utilizadas.
 
+
+# Resumo entre Namespaces e Módulos.
+
+Namespaces
+* Organização feita com objetos
+* Pode ser separado em vários arquivos
+* Não há necessidade de loaders
+* Fugir do escopo global com nomes de variáveis, colocando em namespace diferentes
+<br><br>
+Módulos
+* Organização feita com módulos reais
+* App pode ter múltiplos módulos
+* Precisa de um loader (se quiser colocar em um browser, como SystemJS)
+* Declaração explícita de uma dependência
+
+
+
 # Compilador
 
 - Existem diversas possibilidades dentro do arquivo tsconfig.json! Nessa categoria, vamos estudar algumas!
