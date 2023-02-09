@@ -607,6 +607,7 @@ alturaOpcional = null;
 
 ```
 
+```
 //union types
 let nota: number | string;
 
@@ -647,7 +648,6 @@ console.log(Areas.retangulo(10, 20));
 
 - Podemos criar um namespace dentro de um namespace com namespace aninhado. (devemos exportar o namespace interno para poder acessar suas funções)
 
-
 ```
 
 namespace Geometria {
@@ -670,6 +670,7 @@ console.log(Geometria.Area.retangulo(10, 20));
 ```
 
 ## Namespaces em múltiplos arquivos.
+
 - Podemos separar um namespace por vários arquivos a titulo de organização.
 
 Veja o exemplo:
@@ -692,6 +693,7 @@ const valor = 1900000;
 ```
 
 - Arquivo 2
+
 ```
 
 namespace McDonalds {
@@ -708,6 +710,7 @@ const valor = 20000;
 ```
 
 - Arquivo Principal
+
 ```
 
 const quantidade = 2;
@@ -719,7 +722,7 @@ console.log(McDonalds.Loja.vender());
 
 # Módulos
 
-- *Módulos* são uma forma de exportar e importar funções, métodos e variáveis de um arquivo em outro. Para isso, usamos os prefixos `export` e o `import from`.
+- _Módulos_ são uma forma de exportar e importar funções, métodos e variáveis de um arquivo em outro. Para isso, usamos os prefixos `export` e o `import from`.
 
 - No arquivo que vai exportar:
 
@@ -734,6 +737,7 @@ return raio _ raio _ PI;
 ```
 
 - Arquivo que vai receber:
+
 ```
 
 import { areaCircunferencial } from './circunferencia';
@@ -764,24 +768,52 @@ import areaCircunferencial as circ from './circunferencia';
 ```
 
 ## module
-- Dentro do arquivo tsconfig.json, existe uma propriedade `module` que por padrão recebe `commonjs`, essa propriedade define como o ts vai interpretar os modulos, sendo o es2021, es6, entre outros, algumas das opções utilizadas.
 
+- Dentro do arquivo tsconfig.json, existe uma propriedade `module` que por padrão recebe `commonjs`, essa propriedade define como o ts vai interpretar os modulos, sendo o es2021, es6, entre outros, algumas das opções utilizadas.
 
 # Resumo entre Namespaces e Módulos.
 
 Namespaces
-* Organização feita com objetos
-* Pode ser separado em vários arquivos
-* Não há necessidade de loaders
-* Fugir do escopo global com nomes de variáveis, colocando em namespace diferentes
-<br><br>
-Módulos
-* Organização feita com módulos reais
-* App pode ter múltiplos módulos
-* Precisa de um loader (se quiser colocar em um browser, como SystemJS)
-* Declaração explícita de uma dependência
 
+- Organização feita com objetos
+- Pode ser separado em vários arquivos
+- Não há necessidade de loaders
+- Fugir do escopo global com nomes de variáveis, colocando em namespace diferentes
+  <br><br>
+  Módulos
+- Organização feita com módulos reais
+- App pode ter múltiplos módulos
+- Precisa de um loader (se quiser colocar em um browser, como SystemJS)
+- Declaração explícita de uma dependência
 
+# Interfaces
+
+- Interfaces são maneiras de especificar detalhadamente o que espera de uma função, seja a receber ou retornar.
+
+Ao invés de fazer da seguinte maneira:
+
+```
+
+const pessoa = {
+  nome: 'João',
+  idade: '22'
+}
+
+function recebePessoa(pessoa: { nome: string}) {
+  console.log(pessoa.nome)
+}
+
+function mudaPessoa(pessoa: {nome: string}) {
+  pessoa.nome = 'Maria'
+}
+
+```
+
+Podemos fazer:
+
+```
+
+```
 
 # Compilador
 
@@ -1303,6 +1335,8 @@ fetch('https://swapi.dev/api/people/1')
 .then((filme) => console.log(filme.title)); //acesso o valor retornado anteriormente como filme e consolo.
 
 // ao rodar o código, percebam que existe um delay minimo para retornar os dados da requisição, isso porque é uma api externa, mesmo que seja milissegundos ainda leva um tempo para conectar à api com http e retornar os dados da requisição, e esse tempo minimo é o suficiente para quebrar a nossa aplicação.
+
+```
 
 ```
 
