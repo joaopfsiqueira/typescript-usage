@@ -737,8 +737,29 @@ return raio _ raio _ PI;
 ```
 
 import { areaCircunferencial } from './circunferencia';
+ou
+import { areaCircunferencial as circ } from './circunferencia';
 
 console.log(areaCircunferencial(5));
+console.log(circule(5));
+
+```
+
+- Nas versões novas do ecmascript, podemos usar `export default` fazendo com que não seja necessário desestruturar dentro do import.
+
+```
+
+const PI = 3.14;
+
+export default function areaCircunferencial(raio: number): number {
+return raio _ raio _ PI;
+}
+
+```
+
+```
+
+import areaCircunferencial as circ from './circunferencia';
 
 ```
 
