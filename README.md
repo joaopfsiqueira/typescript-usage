@@ -856,6 +856,36 @@ const pessoa: Humano = {
 pessoa.saudar('Siqueira');
 ```
 
+## interfaces e classes
+
+- Podemos usar uma interface dentro de uma classe! Podendo até mesmo implementar a interface, criando uma outra propriedade!
+
+```
+// Usando Classes... (sem construtor)
+
+class Cliente implements Humano {
+  nome: string = '';
+  ultimaCompra: Date = new Date();
+  saudar(sobrenome: string) {
+    console.log(`Olá ${this.nome} ${sobrenome}`);
+  }
+}
+
+const meuCliente = new Cliente();
+meuCliente.nome = 'Gabriel';
+saudarComOla(meuCliente);
+meuCliente.saudar('Siqueira');
+console.log(meuCliente.ultimaCompra);
+```
+
+## interfaces e funções
+
+- Podemos utilizar interfaces dentro de uma função!
+
+```
+
+```
+
 # Compilador
 
 - Existem diversas possibilidades dentro do arquivo tsconfig.json! Nessa categoria, vamos estudar algumas!

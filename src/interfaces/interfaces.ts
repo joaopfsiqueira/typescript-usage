@@ -40,3 +40,19 @@ function mudarNome2(pessoa: Humano) {
 // mudarNome2({ nome: 'Gabriel' });
 
 pessoa.saudar('Siqueira');
+
+// Usando Classes... (sem construtor)
+
+class Cliente implements Humano {
+  nome: string = '';
+  ultimaCompra: Date = new Date();
+  saudar(sobrenome: string) {
+    console.log(`Olá ${this.nome} ${sobrenome}`);
+  }
+}
+
+const meuCliente = new Cliente();
+meuCliente.nome = 'Gabriel';
+saudarComOla(meuCliente);
+meuCliente.saudar('Siqueira');
+console.log(meuCliente.ultimaCompra);
