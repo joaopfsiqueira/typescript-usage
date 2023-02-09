@@ -717,7 +717,30 @@ console.log(McDonalds.Loja.vender());
 
 ```
 
+# Módulos
 
+- *Módulos* são uma forma de exportar e importar funções, métodos e variáveis de um arquivo em outro. Para isso, usamos os prefixos `export` e o `import from`.
+
+- No arquivo que vai exportar:
+
+```
+
+const PI = 3.14;
+
+export function areaCircunferencial(raio: number): number {
+return raio _ raio _ PI;
+}
+
+```
+
+- Arquivo que vai receber:
+```
+
+import { areaCircunferencial } from './circunferencia';
+
+console.log(areaCircunferencial(5));
+
+```
 
 # Compilador
 
@@ -973,13 +996,13 @@ contagemRegressiva(7); //nesse caso vai assumir o novo valor que eu to passando.
 
 - Inclusive, esse valor padrão pode ser um outro parâmetro!
 
-### Spread
+## Spread
 
 - Spread Operator é um operador utilizado em arrays para instânciar e passar como parâmetro.
 
 ```
 
-// Rest & Spread
+### Rest & Spread
 
 const numbers = [1, 2, 3, 4];
 console.log(Math.max(...numbers));
