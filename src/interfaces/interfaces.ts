@@ -20,7 +20,8 @@ saudarComOla(pessoa);
 
 interface Humano {
   nome: string;
-  idade: number;
+  idade?: number; //o "?" diz que ele pode ou não receber esse atributo, tornando opicional.
+  [prop: string]: any; //colocar entre colchetes []:any diz que vai receber um terceiro atributo, só não sabemos o nome desse atributo!
 }
 
 function saudarComOla2(pessoa: Humano) {
@@ -28,5 +29,8 @@ function saudarComOla2(pessoa: Humano) {
 }
 
 function mudarNome2(pessoa: Humano) {
-  pessoa.nome = 'Maria';
+  pessoa.nome = pessoa.nome;
 }
+
+saudarComOla2({ nome: 'João', idade: 22, xdfsidjsi: true });
+mudarNome2({ nome: 'Gabriel' });

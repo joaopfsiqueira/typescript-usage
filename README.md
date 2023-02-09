@@ -812,8 +812,26 @@ function mudaPessoa(pessoa: {nome: string}) {
 Podemos fazer:
 
 ```
+interface Humano {
+  nome: string;
+  idade?: number; //o "?" diz que ele pode ou não receber esse atributo, tornando opicional.
+  [prop: string]: any; //colocar entre colchetes []:any diz que vai receber um terceiro atributo, só não sabemos o nome desse atributo!
+}
+
+function saudarComOla2(pessoa: Humano) {
+  console.log(`Olá ${pessoa.nome}`);
+}
+
+function mudarNome2(pessoa: Humano) {
+  pessoa.nome = pessoa.nome;
+}
+
+saudarComOla2({ nome: 'João', idade: 22, xdfsidjsi: true });
+mudarNome2({ nome: 'Gabriel' });
 
 ```
+
+Basicamente, criamos uma interface humano, que vai vai explicitar e forçar o recebimento de nome e idade nas duas funções dentro de um objeto. Caso contrário, vai apontar um erro e quebrar o código (dependendo da configuração no tsconfig.)
 
 # Compilador
 
