@@ -1115,6 +1115,25 @@ class Fila<T extends string> {}
 # Decorators
 
 - Decorator é uma função chamada com a sintaxe `@`. É um pouco confuso, fica mais claro com os exemplos!
+- Antes de tudo, precisamos ir no arquivo _tsconfig.json_ e pesquisar por _experimentalDecorators_. Esse recurso vai estar comentado, descomente! Decorators é um recurso experimental, precisamos habilitar essa função para que não aja erro na compilação do ts.
+
+- No código abaixo, criamos uma classe Eletrodoméstico, essa classe vai virar uma Função, se tornando um _decorator_ para _logarClasse_. É através do `@logarClasse` que informamos que essa classe é o `construtor: function` esperado pela _logarClasse_.
+
+```
+@logarClasse
+class Eletrodomestico {
+  constructor() {
+    console.log('Novo');
+  }
+}
+
+function logarClasse(construtor: Function) {
+  console.log(construtor);
+}
+
+new Eletrodomestico();
+
+```
 
 # Compilador
 
