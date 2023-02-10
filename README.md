@@ -1014,6 +1014,19 @@ avaliacoes.push('5.5'); //vai dar erro
 
 - No caso acima, criamos um Array e depois especificamos que dentro dele só vai ter tipos number, é muito comum essa utilização.
 
+- No caso abaixo, aprofundamos em array.
+
+```
+function imprimir<Tipo>(args: Tipo[]) {
+  args.forEach((elemento) => console.log(elemento));
+}
+
+imprimir([1, 2, 3]);
+imprimir<number>([1, 2, 3]);
+imprimir<string>(['1', '2', '3']);
+imprimir<{ nome: string; idade: number }>([{ nome: 'João', idade: 1 }]);
+```
+
 # Compilador
 
 - Existem diversas possibilidades dentro do arquivo tsconfig.json! Nessa categoria, vamos estudar algumas!
