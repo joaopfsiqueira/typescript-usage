@@ -1043,6 +1043,24 @@ console.log(chamarEcho<String>('Hello World'));
 
 - Podemos associar generics com classes! Primeiro fazer o exemplo sem generics e mostrar como o generics pode melhorar!
 
+Assim é uma classe sem generics
+
+```
+class OperacaoBinaria {
+  constructor(public operando1: any, public operando2: any) {}
+
+  executar() {
+    return this.operando1 + this.operando2;
+  }
+}
+
+console.log(new OperacaoBinaria('Bom ', 'dia').executar());
+console.log(new OperacaoBinaria(3, 7).executar());
+console.log(new OperacaoBinaria(4, 'opa').executar());
+console.log(new OperacaoBinaria({}, {}).executar());
+
+```
+
 # Compilador
 
 - Existem diversas possibilidades dentro do arquivo tsconfig.json! Nessa categoria, vamos estudar algumas!

@@ -44,7 +44,7 @@ type Echo = <Tipo>(data: Tipo) => Tipo;
 const chamarEcho: Echo = echoMelhorado;
 console.log(chamarEcho<String>('Hello World'));
 
-// Class com generics
+// Class sem generics
 class OperacaoBinaria {
   constructor(public operando1: any, public operando2: any) {}
 
