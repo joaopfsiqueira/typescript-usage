@@ -1002,6 +1002,18 @@ console.log(echoMelhorado<String>('João'));
 console.log(echoMelhorado<number>(1));
 ```
 
+## Generics com array
+
+- Podemos utilizar o generics em um array! Essa parte em array é bastante simples. usamos o `<>`(Generics) ao lado da declaração de array. Dito isso, o `Array` é genérico, usamos o `<>` para podermos especificar o que queremos!
+
+```
+const avaliacoes: Array<number> = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+avaliacoes.push(8.4);
+avaliacoes.push('5.5'); //vai dar erro
+```
+
+- No caso acima, criamos um Array e depois especificamos que dentro dele só vai ter tipos number, é muito comum essa utilização.
+
 # Compilador
 
 - Existem diversas possibilidades dentro do arquivo tsconfig.json! Nessa categoria, vamos estudar algumas!
