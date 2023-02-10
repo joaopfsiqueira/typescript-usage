@@ -1114,6 +1114,8 @@ class Fila<T extends string> {}
 
 # Decorators
 
+- Decorator é uma função chamada com a sintaxe `@`. É um pouco confuso, fica mais claro com os exemplos!
+
 # Compilador
 
 - Existem diversas possibilidades dentro do arquivo tsconfig.json! Nessa categoria, vamos estudar algumas!
