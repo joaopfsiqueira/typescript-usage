@@ -28,3 +28,13 @@ console.log(echoMelhorado<number>(1));
 const avaliacoes: Array<number> = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 avaliacoes.push(8.4);
 // avaliacoes.push('5.5');
+
+// mais exemplos de array:
+function imprimir<Tipo>(args: Tipo[]) {
+  args.forEach((elemento) => console.log(elemento));
+}
+
+imprimir([1, 2, 3]);
+imprimir<number>([1, 2, 3]);
+imprimir<string>(['1', '2', '3']);
+imprimir<{ nome: string; idade: number }>([{ nome: 'João', idade: 1 }]);
