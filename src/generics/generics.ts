@@ -57,3 +57,18 @@ console.log(new OperacaoBinaria('Bom ', 'dia').executar());
 console.log(new OperacaoBinaria(3, 7).executar());
 console.log(new OperacaoBinaria(4, 'opa').executar());
 console.log(new OperacaoBinaria({}, {}).executar());
+
+// Classe com generics
+abstract class OperacaoBinariaGenerics<Tipo, Tipo2> {
+  constructor(public operando1: Tipo, public operando2: Tipo) {}
+
+  abstract executar(): Tipo2;
+}
+
+class SomaBinaria extends OperacaoBinariaGenerics<number, number> {
+  executar(): number {
+    return this.operando1 + this.operando2;
+  }
+}
+
+console.log(new SomaBinaria(3, 7).executar());
