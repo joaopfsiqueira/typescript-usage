@@ -38,3 +38,8 @@ imprimir([1, 2, 3]);
 imprimir<number>([1, 2, 3]);
 imprimir<string>(['1', '2', '3']);
 imprimir<{ nome: string; idade: number }>([{ nome: 'João', idade: 1 }]);
+
+// Tipo genérico
+type Echo = <Tipo>(data: Tipo) => Tipo;
+const chamarEcho: Echo = echoMelhorado;
+console.log(chamarEcho<String>('Hello World'));

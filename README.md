@@ -1027,6 +1027,18 @@ imprimir<string>(['1', '2', '3']);
 imprimir<{ nome: string; idade: number }>([{ nome: 'João', idade: 1 }]);
 ```
 
+## Generics com funções e tipos
+
+- Podemos usar `Type` com genério, e depois atribuir em um função!
+
+```
+// Tipo genérico
+type Echo = <Tipo>(data: Tipo) => Tipo;
+const chamarEcho: Echo = echoMelhorado;
+console.log(chamarEcho<String>('Hello World'));
+
+```
+
 # Compilador
 
 - Existem diversas possibilidades dentro do arquivo tsconfig.json! Nessa categoria, vamos estudar algumas!
