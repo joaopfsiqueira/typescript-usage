@@ -975,18 +975,31 @@ cli.log();
 
 # Generics
 
-- Generics se refere à tipagem genérica (any), algo que espera algo genérico, qualquer coisa, algo não específicado, pode receber qualquer tipo de valor. É usada em casos onde não importa o tipo da variável, mesmo no banco de dados.
+- Generics se refere à tipagem genérica, algo que espera algo genérico, qualquer coisa, algo não específicado, pode receber qualquer tipo de valor.
+
+- Usando generics, precisamos colocar <> e um nome qualquer dentro, depois atribuimos esse tipo em algum lugar.
 
 ```
-function echo(objeto: any) {
+function echoMelhorado<type>(objeto: type): type {
   return objeto;
 }
 
-console.log(echo('João'));
-console.log(echo(1));
-console.log(echo({ nome: 'João' }));
-console.log(echo('João').length);
+```
 
+- A magia da coisa está na hora de chamar essa função. Por ser um tipo genério ela vai aceitar qualquer coisa, mas vai tratar erros como na segunda linha, número não tem a propriedade length, retornando um erro.
+
+```
+console.log(echoMelhorado('João'));
+// console.log(echoMelhorado(1).length);
+console.log(echoMelhorado({ nome: 'João' }));
+console.log(echoMelhorado('João').length);
+```
+
+- A melhor parte é explicítar em diversas chamadas tipos diferentes, como abaixo, é uma maneira de você deixar `any` e ao mesmo tempo deixar explicíto o tipo.
+
+```
+console.log(echoMelhorado<String>('João'));
+console.log(echoMelhorado<number>(1));
 ```
 
 # Compilador
