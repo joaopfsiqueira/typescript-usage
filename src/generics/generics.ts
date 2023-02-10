@@ -72,3 +72,24 @@ class SomaBinaria extends OperacaoBinariaGenerics<number, number> {
 }
 
 console.log(new SomaBinaria(3, 7).executar());
+
+// outro exemplo mais especifico
+class DiferencaEntreDatas extends OperacaoBinariaGenerics<Data, string> {
+  getTime(data: Data): number {
+    let { dia, mes, ano } = data;
+    return new Date(`${dia} /${mes}/ ${ano}`).getTime();
+  }
+
+  executar(): string {
+    const t1 = this.getTime(this.operando1);
+    const t2 = this.getTime(this.operando2);
+    const diferenca = Math.abs(t1 - t2);
+    const dia = 1000 * 60 * 60 * 24;
+
+    return `${Math.ceil(diferenca / dia)}dias`;
+  }
+}
+
+const d1 = new Data(1, 2, 2023);
+const d2 = new Data(2, 2, 2023);
+console.log(new DiferencaEntreDatas(d1, d2).executar);
