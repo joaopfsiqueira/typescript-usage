@@ -1039,6 +1039,10 @@ console.log(chamarEcho<String>('Hello World'));
 
 ```
 
+## Generics com classes
+
+- Podemos associar generics com classes! Primeiro fazer o exemplo sem generics e mostrar como o generics pode melhorar!
+
 # Compilador
 
 - Existem diversas possibilidades dentro do arquivo tsconfig.json! Nessa categoria, vamos estudar algumas!

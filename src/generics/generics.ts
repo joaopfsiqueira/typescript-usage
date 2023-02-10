@@ -43,3 +43,17 @@ imprimir<{ nome: string; idade: number }>([{ nome: 'João', idade: 1 }]);
 type Echo = <Tipo>(data: Tipo) => Tipo;
 const chamarEcho: Echo = echoMelhorado;
 console.log(chamarEcho<String>('Hello World'));
+
+// Class com generics
+class OperacaoBinaria {
+  constructor(public operando1: any, public operando2: any) {}
+
+  executar() {
+    return this.operando1 + this.operando2;
+  }
+}
+
+console.log(new OperacaoBinaria('Bom ', 'dia').executar());
+console.log(new OperacaoBinaria(3, 7).executar());
+console.log(new OperacaoBinaria(4, 'opa').executar());
+console.log(new OperacaoBinaria({}, {}).executar());
