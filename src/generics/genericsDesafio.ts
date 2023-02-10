@@ -1,6 +1,6 @@
 //o desafio consiste basicamente em criar uma fila com pessoas, um método para adicionar pessoas dentro, um método para fazer avançar a fila e um método para imprimir.
 
-class Fila<T> {
+class Fila<T extends string> {
   private fila: Array<T>;
 
   constructor(...args: T[]) {

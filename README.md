@@ -1104,6 +1104,14 @@ console.log(new DiferencaEntreDatas(d1, d2).executar);
 
 ```
 
+## Constraints em generics
+
+- Constraints é uma forma de restringir alguns tipos ao generics. Para isso, basta utilizarmos `extends` dentro da `<>`!
+
+```
+class Fila<T extends string> {}
+```
+
 # Compilador
 
 - Existem diversas possibilidades dentro do arquivo tsconfig.json! Nessa categoria, vamos estudar algumas!
