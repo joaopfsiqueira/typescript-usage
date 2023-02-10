@@ -1112,6 +1112,8 @@ console.log(new DiferencaEntreDatas(d1, d2).executar);
 class Fila<T extends string> {}
 ```
 
+# Decorators
+
 # Compilador
 
 - Existem diversas possibilidades dentro do arquivo tsconfig.json! Nessa categoria, vamos estudar algumas!
