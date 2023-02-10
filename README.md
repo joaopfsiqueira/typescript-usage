@@ -1061,6 +1061,24 @@ console.log(new OperacaoBinaria({}, {}).executar());
 
 ```
 
+- No exemplo com generics, criamos uma classe abstrata que vai ficar responsável por tipar tudo usando o `<>` do generics, e depois criamos uma outra classe que vai ficar responsável por executar tudo, extendendo a primeira classe.
+
+```
+abstract class OperacaoBinariaGenerics<Tipo, Tipo2> {
+  constructor(public operando1: Tipo, public operando2: Tipo) {}
+
+  abstract executar(): Tipo2;
+}
+
+class SomaBinaria extends OperacaoBinariaGenerics<number, number> {
+  executar(): number {
+    return this.operando1 + this.operando2;
+  }
+}
+
+console.log(new SomaBinaria(3, 7).executar());
+```
+
 # Compilador
 
 - Existem diversas possibilidades dentro do arquivo tsconfig.json! Nessa categoria, vamos estudar algumas!
