@@ -1181,6 +1181,39 @@ function decorator(a: string, b: number) {
 
 - Basicamente, uma forma mais bonita comparado à passada.
 
+## Alterando constructor com decorator.
+
+- Uma classe principal pode ter seus constructors, com decorator, é possível alterar os constructors de qualquer classe e substituir de uma outra função.
+
+- Temos a nossa classe Eletrodomesticos
+
+```
+class Eletrodomestico {
+  constructor() {
+    console.log('Novo');
+  }
+}
+```
+
+- E então, criamos o tipo _construtor_, que basicamente tem como type o type **PADRÃO** de um construtor, só que escrito. `type Construtor = { new (...args: any[]): {} };`
+
+- Depois, criamos uma função que espera receber algo com esse type que criamos, retornando _class_ vazio extendendo o type construtor está esperando receber. Dentro desse retorno, setamos um novo _constructor_ que será importado e vai substituir o _constructor_ da classe pai _Eletrodomestico_, necessitando o prefixo `super` para pegar o que vai ser recebido.
+
+```
+function logarObjeto(construtor: Construtor) {
+  console.log('carregado');
+  return class extends construtor {
+    constructor(...args: any[]) {
+      console.log('antes...');
+      super(...args); // super é para pegar os argumentos que estão sendo recebidos no constructor e na função.
+    }
+  };
+}
+
+new Eletrodomestico();
+new Eletrodomestico();
+```
+
 # Compilador
 
 - Existem diversas possibilidades dentro do arquivo tsconfig.json! Nessa categoria, vamos estudar algumas!

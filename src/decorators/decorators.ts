@@ -1,19 +1,8 @@
-// @logarClasse
-// @logarClasseSe(true)
-// @decorator('teste', 123)
-class Eletrodomestico {
-  constructor() {
-    console.log('Novo');
-  }
-}
-
 function logarClasse(construtor: Function) {
   console.log(construtor);
 }
 
 // nesse caso, o Decorator em questão é a classe eletrodomestico, que vai se transformar em uma função que será recebida em LogarClasse
-
-new Eletrodomestico();
 
 function logarClasseSe(valor: boolean) {
   return valor ? logarClasse : decoratorVazio;
@@ -26,3 +15,29 @@ function decorator(a: string, b: number) {
     console.log(a, b);
   };
 }
+
+// @logarClasse
+// @logarClasseSe(true)
+// @decorator('teste', 123)
+@logarObjeto
+class Eletrodomestico {
+  constructor() {
+    console.log('Novo');
+  }
+}
+
+type Construtor = { new (...args: any[]): {} }; // corpo padrão de um construtor, espera receber um argumento com um tipo!
+
+// o código abaixo tem como principal função substituir o constructor da classe Eletrodomestico, usando decorators e herdando o constructor do decorator
+function logarObjeto(construtor: Construtor) {
+  console.log('carregado');
+  return class extends construtor {
+    constructor(...args: any[]) {
+      console.log('antes...');
+      super(...args); // super é para pegar os argumentos que estão sendo recebidos no constructor e na função.
+    }
+  };
+}
+
+new Eletrodomestico();
+new Eletrodomestico();
