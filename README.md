@@ -1135,6 +1135,52 @@ new Eletrodomestico();
 
 ```
 
+## Decorator factory
+
+- Retorna um decorator, fazendo com a função receba um conjunto de parâmetros e à partir desses parâmetros podemos configurar o decorator. É meio confuso, mas com o exemplo abaixo fica mais simples! (Pessoalmente não achei produtivo)
+
+```
+// @logarClasseSe(true)
+// @decorator('teste', 123)
+class Eletrodomestico {
+  constructor() {
+    console.log('Novo');
+  }
+}
+
+function logarClasse(construtor: Function) {
+  console.log(construtor);
+}
+```
+
+- No código acima, temos dois decorators comentados, o primeiro é referente ao seguinte código:
+
+```
+new Eletrodomestico();
+
+function logarClasseSe(valor: boolean) {
+  return valor ? logarClasse : decoratorVazio;
+}
+
+function decoratorVazio(_: Function) {}
+```
+
+- Em resumo, a função logar classe espera um possível retorno boolean, e tem a possibilidade de retornar `null`, como decorators não aceitam um retorno null quando sua classe principal não retorna null, criamos a _function decoratorVazio_, com o prefixo `_: Function`, que diz que não espera nada, é apenas uma função vazia.
+
+- Ao chamar o decorator no topo da classe, passamos _(true)_ que é o valor booleano que a classe `logarClasseSe` espera!
+
+- O outro decorator:
+
+```
+function decorator(a: string, b: number) {
+  return function (_: Function): void {
+    console.log(a, b);
+  };
+}
+```
+
+- Basicamente, uma forma mais bonita comparado à passada.
+
 # Compilador
 
 - Existem diversas possibilidades dentro do arquivo tsconfig.json! Nessa categoria, vamos estudar algumas!
