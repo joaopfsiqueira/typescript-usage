@@ -1214,6 +1214,33 @@ new Eletrodomestico();
 new Eletrodomestico();
 ```
 
+## Decorators com métodos
+
+- Podemos juntar decorators com métodos, criando uma função e atribuindo com interface.
+
+```
+@imprimivel
+class Eletrodomestico {
+  constructor() {
+    console.log('Novo');
+  }
+}
+
+interface Eletrodomestico {
+  imprimir?(): void;
+}
+
+function imprimivel(construtor: Function) {
+  construtor.prototype.imprimivel = function () {
+    console.log(this);
+  };
+}
+
+const eletro = new Eletrodomestico();
+eletro.imprimir && eletro.imprimir(); // se for verdadeiro, imprime.
+
+```
+
 # Compilador
 
 - Existem diversas possibilidades dentro do arquivo tsconfig.json! Nessa categoria, vamos estudar algumas!

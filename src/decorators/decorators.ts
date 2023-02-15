@@ -16,16 +16,6 @@ function decorator(a: string, b: number) {
   };
 }
 
-// @logarClasse
-// @logarClasseSe(true)
-// @decorator('teste', 123)
-@logarObjeto
-class Eletrodomestico {
-  constructor() {
-    console.log('Novo');
-  }
-}
-
 type Construtor = { new (...args: any[]): {} }; // corpo padrão de um construtor, espera receber um argumento com um tipo!
 
 // o código abaixo tem como principal função substituir o constructor da classe Eletrodomestico, usando decorators e herdando o constructor do decorator
@@ -39,5 +29,29 @@ function logarObjeto(construtor: Construtor) {
   };
 }
 
-new Eletrodomestico();
-new Eletrodomestico();
+// new Eletrodomestico();
+// new Eletrodomestico();
+
+// @logarClasse
+// @logarClasseSe(true)
+// @decorator('teste', 123)
+// @logarObjeto
+@imprimivel
+class Eletrodomestico {
+  constructor() {
+    console.log('Novo');
+  }
+}
+
+interface Eletrodomestico {
+  imprimir?(): void;
+}
+
+function imprimivel(construtor: Function) {
+  construtor.prototype.imprimivel = function () {
+    console.log(this);
+  };
+}
+
+const eletro = new Eletrodomestico();
+eletro.imprimir && eletro.imprimir();
