@@ -1216,7 +1216,7 @@ new Eletrodomestico();
 new Eletrodomestico();
 ```
 
-## Decorators com métodos
+## Decorators com métodos de CLASSES
 
 - Podemos juntar decorators com métodos, criando uma função e atribuindo com interface.
 

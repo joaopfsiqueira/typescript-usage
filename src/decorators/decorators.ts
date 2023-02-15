@@ -55,3 +55,34 @@ function imprimivel(construtor: Function) {
 
 const eletro = new Eletrodomestico();
 eletro.imprimir && eletro.imprimir();
+
+class ContaCorrente {
+  private saldo: number;
+
+  constructor(saldo: number) {
+    this.saldo = saldo;
+  }
+
+  sacar(valor: number) {
+    if (valor <= this.saldo) {
+      this.saldo -= valor;
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  getSaldo() {
+    return this.saldo;
+  }
+}
+
+const cc = new ContaCorrente(1000);
+cc.sacar(100);
+console.log(cc.getSaldo());
+
+cc.getSaldo = function () {
+  return this['saldo'] + 700; //usamos notação de string em saldo ao inves de this.saldo por conta do atributo ser privado.
+};
+
+console.log(cc.getSaldo());
