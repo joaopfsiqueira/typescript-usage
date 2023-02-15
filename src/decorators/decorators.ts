@@ -63,6 +63,7 @@ class ContaCorrente {
     this.saldo = saldo;
   }
 
+  @congelar
   sacar(valor: number) {
     if (valor <= this.saldo) {
       this.saldo -= valor;
@@ -72,6 +73,7 @@ class ContaCorrente {
     }
   }
 
+  @congelar
   getSaldo() {
     return this.saldo;
   }
@@ -86,3 +88,14 @@ cc.getSaldo = function () {
 };
 
 console.log(cc.getSaldo());
+
+// Object.freeze() Esse código basicamente vai congelar o valor de um dado, não permitindo que um primeiro retorno de um método não seja alterado. É uma função nativa do javascript, esperando receber um alvo, nome da propriedade e o descritor da propriedade, o descritor é o que pode ou não fazer com esse alvo. Usamos o método writrable que é a propriedade que queremos alterar desse retorno e colocamos como false.
+function congelar(
+  alvo: any,
+  nomePropriedade: string,
+  descritor: PropertyDescriptor
+) {
+  console.log(alvo);
+  console.log(nomePropriedade);
+  descritor.writable = false;
+}

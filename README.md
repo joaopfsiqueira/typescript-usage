@@ -1243,6 +1243,55 @@ eletro.imprimir && eletro.imprimir(); // se for verdadeiro, imprime.
 
 ```
 
+## Decorators em métodos diretos, não na classe.
+
+- Podemos usar os decorators em métodos dentro de classes que não tem decorators. Segue o exemplo!
+
+```
+class ContaCorrente {
+  private saldo: number;
+
+  constructor(saldo: number) {
+    this.saldo = saldo;
+  }
+
+  @congelar
+  sacar(valor: number) {
+    if (valor <= this.saldo) {
+      this.saldo -= valor;
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  @congelar
+  getSaldo() {
+    return this.saldo;
+  }
+}
+
+const cc = new ContaCorrente(1000);
+cc.sacar(100);
+console.log(cc.getSaldo());
+
+cc.getSaldo = function () {
+  return this['saldo'] + 700; //usamos notação de string em saldo ao inves de this.saldo por conta do atributo ser privado.
+};
+
+console.log(cc.getSaldo());
+
+// Object.freeze() Esse código basicamente vai congelar o valor de um dado, não permitindo que um primeiro retorno de um método não seja alterado. É uma função nativa do javascript, esperando receber um alvo, nome da propriedade e o descritor da propriedade, o descritor é o que pode ou não fazer com esse alvo. Usamos o método writrable que é a propriedade que queremos alterar desse retorno e colocamos como false.
+function congelar(
+  alvo: any,
+  nomePropriedade: string,
+  descritor: PropertyDescriptor
+) {
+  console.log(alvo);
+  console.log(nomePropriedade);
+  descritor.writable = false;
+```
+
 # Compilador
 
 - Existem diversas possibilidades dentro do arquivo tsconfig.json! Nessa categoria, vamos estudar algumas!
