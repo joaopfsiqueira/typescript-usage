@@ -1292,6 +1292,14 @@ function congelar(
   descritor.writable = false;
 ```
 
+## Decorators em atributos!
+
+- Para finalizar o tópico de decorators, podemos colocar decoratos em cima de atributos!
+
+```
+
+```
+
 # Compilador
 
 - Existem diversas possibilidades dentro do arquivo tsconfig.json! Nessa categoria, vamos estudar algumas!
