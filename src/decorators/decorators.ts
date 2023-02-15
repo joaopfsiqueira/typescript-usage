@@ -120,3 +120,6 @@ function naoNegativo(alvo: any, nomePropriedade: string) {
 
 cc.sacar(1200);
 console.log(cc.getSaldo());
+
+// importante informar que essa função abaixo não tem acesso ao VALOR do parâmetro.
+function paramInfo(alvo: any, nomeMetodo: string, indiceParam: number) {}

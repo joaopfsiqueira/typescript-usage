@@ -1317,6 +1317,14 @@ function naoNegativo(alvo: any, nomePropriedade: string) {
 
 - Depois, basta utilizar `@naoNegativo` em cima do atributo e pronto! Para testar é só chamar o método sacar, passando um valor superior ao saldo informado e logar.
 
+## Decorator com parâmetros
+
+- Por fim, vamos ver os decorators juntos de parâmetros.
+
+```
+
+```
+
 # Compilador
 
 - Existem diversas possibilidades dentro do arquivo tsconfig.json! Nessa categoria, vamos estudar algumas!
