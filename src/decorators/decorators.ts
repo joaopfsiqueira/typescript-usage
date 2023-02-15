@@ -57,6 +57,7 @@ const eletro = new Eletrodomestico();
 eletro.imprimir && eletro.imprimir();
 
 class ContaCorrente {
+  @naoNegativo
   private saldo: number;
 
   constructor(saldo: number) {
@@ -99,3 +100,23 @@ function congelar(
   console.log(nomePropriedade);
   descritor.writable = false;
 }
+
+// função que vai forçar um atributo de uma classe nunca ser negativo.
+function naoNegativo(alvo: any, nomePropriedade: string) {
+  delete alvo[nomePropriedade];
+  Object.defineProperty(alvo, nomePropriedade, {
+    get: function (): any {
+      return alvo['_' + nomePropriedade];
+    },
+    set: function (valor: any): void {
+      if (valor < 0) {
+        throw new Error('Valor inválido');
+      } else {
+        alvo['_' + nomePropriedade] = valor;
+      }
+    },
+  });
+}
+
+cc.sacar(1200);
+console.log(cc.getSaldo());

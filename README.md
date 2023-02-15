@@ -1294,11 +1294,28 @@ function congelar(
 
 ## Decorators em atributos!
 
-- Para finalizar o tópico de decorators, podemos colocar decoratos em cima de atributos!
+- Podemos colocar decoratos em cima de atributos! No exemplo abaixo, criamos um decorator para a classe de ContaCorrente acima, vamos fazer com o que o atributo `saldo` não passe de 0! Ou seja, não fique negativo!
+
+```
+function naoNegativo(alvo: any, nomePropriedade: string) {
+  delete alvo[nomePropriedade];
+  Object.defineProperty(alvo, nomePropriedade, {
+    get: function (): any {
+      return alvo['_' + nomePropriedade];
+    },
+    set: function (valor: any): void {
+      if (valor < 0) {
+        throw new Error('Valor inválido');
+      } else {
+        alvo['_' + nomePropriedade] = valor;
+      }
+    },
+  });
+}
 
 ```
 
-```
+- Depois, basta utilizar `@naoNegativo` em cima do atributo e pronto! Para testar é só chamar o método sacar, passando um valor superior ao saldo informado e logar.
 
 # Compilador
 
