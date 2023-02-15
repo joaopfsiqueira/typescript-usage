@@ -1135,6 +1135,8 @@ new Eletrodomestico();
 
 ```
 
+- Reforçando, podemos atribuir mais de um decorator em uma classe!
+
 ## Decorator factory
 
 - Retorna um decorator, fazendo com a função receba um conjunto de parâmetros e à partir desses parâmetros podemos configurar o decorator. É meio confuso, mas com o exemplo abaixo fica mais simples! (Pessoalmente não achei produtivo)
