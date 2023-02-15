@@ -1319,11 +1319,33 @@ function naoNegativo(alvo: any, nomePropriedade: string) {
 
 ## Decorator com parâmetros
 
-- Por fim, vamos ver os decorators juntos de parâmetros.
+- Por fim, vamos ver os decorators juntos de parâmetros. Esse decorator é chamado logo no inicio antes de chamar parâmetros.
+
+```
+// importante informar que essa função abaixo não tem acesso ao VALOR do parâmetro.
+function paramInfo(alvo: any, nomeMetodo: string, indiceParam: number) {
+  console.log(`Alvo: ${alvo}`);
+  console.log(`Método: ${nomeMetodo}`);
+  console.log(`Índice Param: ${indiceParam}`);
+}
 
 ```
 
+- Esse código acima basicamente vai retornar informações dos parâmetros que estão sendo esperados ou recebidos em uma função, veja o exemplo da utilização:
+
 ```
+  @congelar
+  sacar(@paramInfo valor: number) {
+    if (valor <= this.saldo) {
+      this.saldo -= valor;
+      return true;
+    } else {
+      return false;
+    }
+  }
+```
+
+- Nesse caso, ele vai logar como _Alvo_: `[object Object]`, _Método:_ `sacar` e _índice Param:_ `0`
 
 # Compilador
 
