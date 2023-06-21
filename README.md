@@ -95,7 +95,7 @@ npm i -s live-server (-s para salvar nas dependencias, vai servir para rodar o h
 
 ## Constructor
 
-- O construtor é um método especial para criar e inicializar um objeto criado a partir de uma classe. Ele pode ser declarado de várias maneiras, mas sempre dentro de uma classe. Alguns jeitos:
+- O construtor é um método especial para criar e inicializar um objeto com vários métodos e variáveis criados à partir (ou só recebido) de uma classe. Ele pode ser declarado de várias maneiras, mas sempre dentro de uma classe. Alguns jeitos:
 
 1. Assumindo valor padrão. Usando this para referenciar o atributo declarado anteriormente dentro da classe.
 
