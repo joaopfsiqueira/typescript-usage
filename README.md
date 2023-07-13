@@ -617,6 +617,11 @@ console.log(`Minha nota é ${nota}`);
 nota = '10';
 console.log(`Minha nota é ${nota}`);
 
+ou
+
+let nota2: number & string;
+
+
 ```
 
 # Namespaces
