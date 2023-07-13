@@ -468,7 +468,34 @@ enum Cor {
 let minhaCor: Cor = Cor.Cinza;
 console.log(minhaCor);
 console.log(Cor.Azul);
+
 ```
+
+- Também podemos usar ao invés de switch case ou ternários!
+  ```
+  export enum returnStatusCode {
+  criado: 0,
+  agendado: 1,
+  concluido: 2,
+  finalizado: 3,
+  }
+
+
+  // ao invés de
+
+  export function changeStatus(status: string): number {
+  switch(status) {
+    case 'criado':
+      return 0,
+    case 'agendado:
+      return 1,
+    default:
+      return 2
+    }
+  }
+  ```
+
+  - E ai ao invés de chamar `changeStatus(status)`, a gente usa: `returnStatusCode.status` 
 
 ### Any
 
